@@ -1,0 +1,17 @@
+title,page_layout,meta_keywords,meta_description,identifier,content_heading,content,is_active,sort_order,layout_update_xml,custom_theme,custom_root_template,custom_layout_update_xml,custom_theme_from,custom_theme_to
+"About us magefan",1column,,,about-us,"About us","<div class=""about-info cms-content"">
+      <p class=""cms-content-important"">With more than 230 stores spanning 43 states and growing, Luma is a nationally recognized active wear manufacturer and retailer. We’re passionate about active lifestyles – and it goes way beyond apparel.</p>
+
+      <p>At Luma, wellness is a way of life. We don’t believe age, gender or past actions define you, only your ambition and desire for wholeness... today.</p>
+
+      <p>We differentiate ourselves through a combination of unique designs and styles merged with unequaled standards of quality and authenticity. Our founders have deep roots in yoga and health communities and our selections serve amateur practitioners and professional athletes alike.</p>
+
+      <ul style=""list-style: none; margin-top: 20px; padding: 0;"">
+          <li><a href=""{{store url=""contact""}}"">Contact Luma</a></li>
+          <li><a href=""{{store url=""customer-service""}}"">Customer Service</a></li>
+          <li><a href=""{{store url=""privacy-policy""}}"">Luma Privacy Policy</a></li>
+          <li><a href=""{{store url=""""}}"">Shop Luma</a></li>
+      </ul>
+  </div>
+",1,,,,,,,
+"Home Page magefan",1column,,,home-page,"Home Page","",1,,,,,,,

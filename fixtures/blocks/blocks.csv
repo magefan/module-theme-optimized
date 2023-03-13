@@ -1,0 +1,96 @@
+title,identifier,content,is_active
+"WeltPixel Footer Container",weltpixel_footer_container,"{{block class=""Magento\\Cms\\Block\\Block"" block_id=""weltpixel_pre-footer""}}{{block class=""Magento\\Cms\\Block\\Block"" block_id=""weltpixel_footer_v1""}}
+{{block class=""Magento\\Cms\\Block\\Block"" block_id=""weltpixel_footer_v2""}}
+",1
+"Magefan Pre-Footer",magefan_pre-footer,"
+<div class=""pre-footer"">
+<div class=""pre-footer-content"">
+<div class=""col-sm-3 col-xs-6"">
+<i class=""footer-icon icon-line-clock""></i>
+<p class=""pre-footer-subtitle"">Fast & Free</p>
+<p class=""pre-footer-title"">Delivery</p>
+</div>
+
+<div class=""col-sm-3 col-xs-6"">
+<i class=""footer-icon icon-line-clock""></i>
+<p class=""pre-footer-subtitle"">24/7 Support</p>
+<a href=""tel:1-800-000-0000""><p class=""pre-footer-title"">1-800-000-0000</p></a>
+</div>
+
+<div class=""col-sm-3 col-xs-6"">
+<i class=""footer-icon icon-tags""></i>
+<p class=""pre-footer-subtitle"">Best Price</p>
+<p class=""pre-footer-title"">Guaranteed</p>
+</div>
+
+<div class=""col-sm-3 col-xs-6"">
+<i class=""footer-icon icon-reply-all""></i>
+<p class=""pre-footer-subtitle"">30 Days</p>
+<p class=""pre-footer-title"">Return Policy</p>
+</div>
+</div>
+</div>",1
+"Magefan Footer V1",weltpixel_footer_v1,"
+<div class=""footer-v1"">
+   <div class=""footer-v1-content"">
+      <div class=""col-sm-3 col-xs-12 nopaddingleft"">
+     		<h4 class=""mini-logo""><img loading=""lazy"" alt=""Logo"" src=""{{media url=""wysiwyg/pearl_theme/pearl_logo.png""}}"" style=""width:100px""></h4>
+            <a href=""https://www.google.com/maps/search/City+Hall,+New+York,+NY/@40.5055317,-75.2220421,6.71z""><p>New York, NY, 00841</p></a>
+            <a href=""tel:1-800-000-0000""><p>1-800-000-0000</p></a>
+            <a href=""mailto:support@weltpixel.com""><p>support@weltpixel.com</p></a>
+      </div>
+      <div class=""col-sm-3 col-xs-12 nopaddingleft"">
+         <p class=""footer-title"">Pearl Theme</p>
+         <ul class=""footer links"">
+            <li class=""nav item""><a href=""https://www.weltpixel.com/magento-2-theme-pearl/"" target=""_blank"">Buy Pearl Theme</a></li>
+            <li class=""nav item""><a href=""https://www.weltpixel.com/resources/PearlTheme/User-Guide-WeltPixel-Pearl-Theme-Magento2.html"" target=""_blank"">User Guide</a></li>
+            <li class=""nav item""><a href=""http://pearl.weltpixel.com/admin/demologin"" target=""_blank"">Demo Admin</a></li>
+            <li class=""nav item""><a href=""https://support.weltpixel.com/hc/en-us"" target=""_blank"">Help Center</a></li>
+         </ul>
+      </div>
+      <div class=""col-sm-3 col-xs-12 nopaddingleft"">
+         <p class=""footer-title"">Store</p>
+         <ul class=""footer links"">
+            <li class=""nav item""><a href=""{{store url=""customer/account/login/""}}"">Sign In</a></li>
+            <li class=""nav item""><a href=""{{store url=""sales/guest/form/""}}"">Orders and Returns</a></li>
+            <li class=""nav item""><a href=""{{store url=""privacy-policy-cookie-restriction-mode""}}"">Privacy Policy</a></li>
+            <li class=""nav item""><a href=""{{store url=""contact/""}}"">Contact Us</a></li>
+         </ul>
+      </div>
+      <div class=""col-sm-3 col-xs-12 nopaddingleft"">
+         <p class=""footer-title"">Search</p>
+         <ul class=""footer links"">
+            <li class=""nav item""><a href=""{{store url=""catalogsearch/advanced/""}}"">Search Terms</a></li>
+            <li class=""nav item""><a href=""{{store url=""catalogsearch/advanced/""}}"">Advanced Search</a></li>
+         </ul>
+      </div>
+      <div class=""col-xs-12 border-v1"">
+	      <div class=""pull-left-md"">
+      		<p class=""small-text"">Let's stay in touch!</p>
+	      </div>
+	      <div class=""pull-right-md social-icons-v1"">
+	      		<a href=""#"" class=""social-icons si-borderless si-facebook"">
+                    <i class=""icon-facebook""></i>
+                    <i class=""icon-facebook""></i>
+                </a>
+                <a href=""#"" class=""social-icons si-borderless si-twitter"">
+                    <i class=""icon-twitter""></i>
+                    <i class=""icon-twitter""></i>
+                </a>
+                <a href=""#"" class=""social-icons si-borderless si-linkedin"">
+                    <i class=""icon-linkedin""></i>
+                    <i class=""icon-linkedin""></i>
+                </a>
+                <a href=""#"" class=""social-icons si-borderless si-instagram"">
+                    <i class=""icon-instagram""></i>
+                    <i class=""icon-instagram""></i>
+                </a>
+                 <a href=""#"" class=""social-icons si-borderless si-pinterest"">
+                    <i class=""icon-pinterest""></i>
+                    <i class=""icon-pinterest""></i>
+                </a>
+	      </div>
+      </div>
+   </div>
+</div>
+",0

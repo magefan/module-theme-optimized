@@ -1,0 +1,133 @@
+//
+//  Magefan FO Theme Colors
+//  ____________________________________________
+
+// Theme Colors
+@theme__color__primary: {{color (theme_color/primary)}};
+@theme__color__primary-alt: {{color (theme_color/primary_alt)}};
+@theme__color__secondary: {{color (theme_color/secondary)}};
+
+// Color nesting
+// Basic colors
+@page__background-color: {{color (basic/page_background_color)}};
+@primary__color: {{color (basic/text_color)}};
+@text__color: {{color (basic/text_color)}};
+@border-color__base: {{color (basic/border_color_base)}};
+@sidebar__background-color: {{color (basic/sidebar_background_color)}};
+
+// Primary buttons
+@button-primary__background: {{color (primary_button/primary_button_bg_color)}};
+@button-primary__hover__background: {{color (primary_button/primary_button_bg_color_hover)}};
+@button-primary__color: {{color (primary_button/primary_button_color)}};
+@button-primary__hover__color: {{color (primary_button/primary_button_color_hover)}};
+@button-primary__border: 1px solid {{color (primary_button/primary_button_border_color)}};
+@button-primary__hover__border: 1px solid {{color (primary_button/primary_button_border_color_hover)}};
+
+// Buttons
+@button__background: {{color (secondary_button/button_bg_color)}};
+@button__hover__background: {{color (secondary_button/button_bg_color_hover)}};
+@button__color: {{color (secondary_button/button_color)}};
+@button__hover__color: {{color (secondary_button/button_color_hover)}};
+@button__border: 1px solid {{color (secondary_button/button_border_color)}};
+@button__hover__border: 1px solid {{color (secondary_button/button_border_color_hover)}};
+
+// Link
+@link__color: {{color (link/link_color)}};
+@link__hover__color: {{color (link/link_color_hover)}};
+// @link__visited__color: @link__color;
+// @link__active__color: @active__color;
+
+// Icons
+@icon_color: {{color (icon/icon_color)}};
+@icon_color_hover: {{color (icon/icon_color_hover)}};
+
+// All Icons
+@icon-font__color: {{color (icon/icon_color)}};
+@icon-font__color-hover: {{color (icon/icon_color_hover)}};
+@_icon-font-color-active: @icon-font__color-hover;
+// @_icon-font-color: @icon-font__color;
+// @_icon-font-color-hover: @icon-font__color-hover;
+
+// Form
+// @form-element-input__background: @color-gray89;
+@form-element-input__background: {{color (input/input_background_color)}};
+@form-element-input__border-color: @border-color__base;
+@form-element-input__border-color: {{color (input/input_border_color)}};
+// @form-element-input__border: 1px solid @form-element-input__border-color;
+@form-element-input__color: {{color (input/input_color)}};
+// Placeholder
+// @form-element-input-placeholder__color: @color-gray60;
+@form-element-input-placeholder__color: {{color (input/input_placeholder_color)}};
+// Autofill
+@form-element_autofill__background: {{color (input/input_background_color)}};
+@form-element_autofill__color: {{color (input/input_color)}};
+
+// Tabs
+@tab-control__background-color: @page__background-color;
+
+// @navigation__background: @color-gray40;
+// @navigation-desktop-level0-item__color: @color-gray80;
+// @navigation-desktop-level0-item__hover__color: @color-gray34;
+// @navigation-desktop-level0-item__active__color: @navigation-desktop-level0-item__color;
+
+// Header
+@header__background-color: {{color (header/header_bg_color)}};
+
+// Header Top Panel
+@header_panel_wrapper: {{color (header/header_panel_wrapper_bg_color)}};
+@header_panel_wrapper_color: {{color (header/header_panel_wrapper_color)}};
+
+// Header icons
+@header-icons-color: {{color (icon_header/icon_header_color)}};
+@header-icons-color-hover: {{color (icon_header/icon_header_color_hover)}};
+
+// Navigation Mobile
+@navigation-level0-item__color: {{color (navigation/nav_item_color)}};
+@navigation-level0-item__hover__color: {{color (navigation/nav_item_color_hover)}};
+// Submenu Mobile
+@submenu-item__color: {{color (navigation/nav_item_color)}};
+
+// Navigation Desktop
+@navigation__background: {{color (navigation/nav_bg_color)}};
+//@navigation__background__hover: {{color (navigation/sub_menu_item_bg_color_hover)}};
+@navigation-desktop-level0-item__color: {{color (navigation/nav_item_color)}};
+@navigation-desktop-level0-item__hover__color: {{color (navigation/nav_item_color_hover)}};
+@navigation-desktop-level0-item__active__color: {{color (navigation/nav_item_color_hover)}};
+
+// Submenu Desktop
+@submenu-desktop-item__color: {{color (navigation/sub_menu_item_color)}};
+@submenu-desktop-item__hover__color: {{color (navigation/sub_menu_item_color_hover)}};
+@submenu-desktop-item__background: {{color (navigation/sub_menu_item_bg_color)}};
+@submenu-desktop-item__hover__background: {{color (navigation/sub_menu_item_bg_color_hover)}};
+//@submenu-desktop-item__active__color: ;
+//@submenu-desktop-item__active__border-color: ;
+
+// Collapsible menu
+//@collapsible-nav-background: ;
+//@collapsible-nav-item-hover: ;
+
+// Breadcrumbs
+//@_breadcrumbs-link-color: {{color (link/link_color)}};
+//@_breadcrumbs-link-color-visited: {{color (link/link_color)}};
+@_breadcrumbs-link-color: {{color (basic/text_color)}};
+@_breadcrumbs-link-color-visited: {{color (basic/text_color)}};
+@_breadcrumbs-current-color: {{color (basic/text_color)}};
+
+// Product Items
+@product_items_bg_color: {{color (product_items/product_items_bg_color)}};
+@product_items_color: {{color (product_items/product_items_color)}};
+@product_items_border_color: {{color (product_items/product_items_border_color)}};
+@product_items_border_color_hover: {{color (product_items/product_items_border_color_hover)}};
+@product_items_border_radius: {{color (product_items/product_items_border_radius)}};
+
+
+// Subscribe
+@subscribe-bg-color: {{color (subscribe/subscribe_bg_color)}};
+@subscribe-color: {{color (subscribe/subscribe_color)}};
+
+// Footer
+@footer__background-color: {{color (footer/footer_bg_color)}};
+
+// Copyright
+@copyright_bg_color: {{color (copyright/copyright_bg_color)}};
+@copyright_color: {{color (copyright/copyright_color)}};

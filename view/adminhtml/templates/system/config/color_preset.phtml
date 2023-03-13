@@ -1,0 +1,390 @@
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+
+<div id="color-preset">
+    <div class="red" onclick="changeColorSchema(this,'red')">
+        <span><?=__('Red')?></span>
+    </div>
+    <div class="green" onclick="changeColorSchema(this,'green')">
+        <span><?=__('Green')?></span>
+    </div>
+    <div class="blue" onclick="changeColorSchema(this,'blue')">
+        <span><?=__('Blue')?></span>
+    </div>
+    <div class="silver" onclick="changeColorSchema(this,'silver')">
+        <span><?=__('Silver')?></span>
+    </div>
+    <div class="black" onclick="changeColorSchema(this,'black')">
+        <span><?=__('Black')?></span>
+    </div>
+
+    <br>
+    <a href="javascript:reloadPage()" class="reset _hidden">reset</a>
+
+  <?php /*  <p class="notice hidden"><?='Make sure that the field option [use websites | use default] is not checked if you want to apply a current color scheme'?></p>*/?>
+</div>
+
+<style>
+    #color-preset {display: flex;align-items: center;flex-wrap: wrap;}
+    #color-preset span {display: none;}
+    #color-preset div {
+        display: inline-block;
+        margin: 5px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        padding: 20px;
+        border-radius: 6px;
+        color: #fff;
+
+        text-align: center;
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    #color-preset div.active {
+        opacity: 1;
+        padding: 23px;
+        vertical-align: bottom;
+    }
+    #color-preset .red {
+        background-color: rgba(243, 87, 87, 0.97);
+        background-image: linear-gradient(to right, rgba(243, 87, 87, 0.97) 0%, rgb(189, 17, 17) 100%);
+    }
+    #color-preset .green {
+        background-color: rgba(51, 229, 51, 0.66);
+        background-image: linear-gradient(to right, rgba(51, 229, 51, 0.66) 0%, rgb(16, 112, 16) 100%);
+    }
+    #color-preset .blue {
+        background-color: rgb(53, 159, 236);
+        background-image: linear-gradient(to right, rgb(53, 159, 236) 0%, rgb(9, 80, 133) 100%);
+    }
+    #color-preset .silver {
+        background-color: silver;
+        background-image: linear-gradient(to right, silver 0%, rgba(255, 255, 255, 0.44) 100%);
+    }
+    #color-preset .black {
+        background-color: black;
+        background-image: linear-gradient(to right, black 0%, rgba(255, 255, 255, 0.44) 100%);
+    }
+    #color-preset .reset {color: red;margin-left: 20px;}
+</style>
+
+
+<?php
+$colorSchemaPresets = [
+        'red' => [
+            'theme_color/primary' => '1a1a1a',
+            'theme_color/primary_alt'=> 'f5f5f5',
+            'theme_color/secondary'=> 'd23d43',
+            'basic/page_background_color' => 'ffffff',
+            'basic/text_color' => '333333',
+            'basic/border_color_base' => 'c2c2c2',
+            'basic/sidebar_background_color' => 'f5f5f5',
+            'primary_button/primary_button_bg_color' => 'd23d43',
+            'primary_button/primary_button_bg_color_hover' => '932a36',
+            'primary_button/primary_button_color' => 'ffffff',
+            'primary_button/primary_button_color_hover' => 'ffffff',
+            'primary_button/primary_button_border_color' => 'd23d43',
+            'primary_button/primary_button_border_color_hover' => '932a36',
+            'secondary_button/button_bg_color' => '343434',
+            'secondary_button/button_bg_color_hover' => 'e2e2e2',
+            'secondary_button/button_color' => 'ffffff',
+            'secondary_button/button_color_hover' => '555555',
+            'secondary_button/button_border_color' => '343434',
+            'secondary_button/button_border_color_hover' => '343434',
+            'link/link_color' => '1a1a1a',
+            'link/link_color_hover' => 'd23d43',
+            'icon/icon_color' => '7d7d7d',
+            'icon/icon_color_hover' => '1a1a1a',
+            'icon_header/icon_header_color' => '8f8f8f',
+            'icon_header/icon_header_color_hover' => '333333',
+            'input/input_background_color' => 'ffffff',
+            'input/input_placeholder_color' => 'c2c2c2',
+            'input/input_color' => '333333',
+            'input/input_border_color' => 'c2c2c2',
+            'header/header_panel_wrapper_bg_color' => 'f5f5f5',
+            'header/header_panel_wrapper_color' => '1a1a1a',
+            'header/header_bg_color' => 'ffffff',
+            'navigation/nav_bg_color' => 'e6e6e6',
+            'navigation/nav_item_color' => '575757',
+            'navigation/nav_item_color_hover' => '333333',
+            'navigation/sub_menu_item_bg_color' => 'ffffff',
+            'navigation/sub_menu_item_bg_color_hover' => 'f5f5f5',
+            'navigation/sub_menu_item_color' => '575757',
+            'navigation/sub_menu_item_color_hover' => '1a1a1a',
+            'subscribe/subscribe_bg_color' => 'e6e6e6',
+            'subscribe/subscribe_color' => '575757',
+            'footer/footer_bg_color'=> 'ffffff',
+            'copyright/copyright_bg_color'=> '343434',
+            'copyright/copyright_color' => 'cdcdcd'
+        ],
+        'blue' => [
+            'theme_color/primary' => '1a1a1a',
+            'theme_color/primary_alt'=> 'f5f5f5',
+            'theme_color/secondary'=> '2844a9',
+            'basic/page_background_color' => 'ffffff',
+            'basic/text_color' => '333333',
+            'basic/border_color_base' => 'c2c2c2',
+            'basic/sidebar_background_color' => 'f5f5f5',
+            'primary_button/primary_button_bg_color' => '2844a9',
+            'primary_button/primary_button_bg_color_hover' => '212ab1',
+            'primary_button/primary_button_color' => 'ffffff',
+            'primary_button/primary_button_color_hover' => 'ffffff',
+            'primary_button/primary_button_border_color' => '2844a9',
+            'primary_button/primary_button_border_color_hover' => '212ab1',
+            'secondary_button/button_bg_color' => '343434',
+            'secondary_button/button_bg_color_hover' => 'e2e2e2',
+            'secondary_button/button_color' => 'ffffff',
+            'secondary_button/button_color_hover' => '555555',
+            'secondary_button/button_border_color' => '343434',
+            'secondary_button/button_border_color_hover' => '343434',
+            'link/link_color' => '1a1a1a',
+            'link/link_color_hover' => '212ab1',
+            'icon/icon_color' => '7d7d7d',
+            'icon/icon_color_hover' => '1a1a1a',
+            'icon_header/icon_header_color' => '8f8f8f',
+            'icon_header/icon_header_color_hover' => '333333',
+            'input/input_background_color' => 'ffffff',
+            'input/input_placeholder_color' => 'c2c2c2',
+            'input/input_color' => '333333',
+            'input/input_border_color' => 'c2c2c2',
+            'header/header_panel_wrapper_bg_color' => 'f5f5f5',
+            'header/header_panel_wrapper_color' => '1a1a1a',
+            'header/header_bg_color' => 'ffffff',
+            'navigation/nav_bg_color' => 'e6e6e6',
+            'navigation/nav_item_color' => '575757',
+            'navigation/nav_item_color_hover' => '333333',
+            'navigation/sub_menu_item_bg_color' => 'ffffff',
+            'navigation/sub_menu_item_bg_color_hover' => 'f5f5f5',
+            'navigation/sub_menu_item_color' => '575757',
+            'navigation/sub_menu_item_color_hover' => '1a1a1a',
+            'subscribe/subscribe_bg_color' => 'e6e6e6',
+            'subscribe/subscribe_color' => '575757',
+            'footer/footer_bg_color'=> 'ffffff',
+            'copyright/copyright_bg_color'=> '343434',
+            'copyright/copyright_color' => 'cdcdcd'
+        ],
+        'green' => [
+            'theme_color/primary' => '1a1a1a',
+            'theme_color/primary_alt'=> 'f5f5f5',
+            'theme_color/secondary'=> '85b73b',
+            'basic/page_background_color' => 'ffffff',
+            'basic/text_color' => '333333',
+            'basic/border_color_base' => 'c2c2c2',
+            'basic/sidebar_background_color' => 'f5f5f5',
+            'primary_button/primary_button_bg_color' => '85b73b',
+            'primary_button/primary_button_bg_color_hover' => '76a334',
+            'primary_button/primary_button_color' => 'ffffff',
+            'primary_button/primary_button_color_hover' => 'ffffff',
+            'primary_button/primary_button_border_color' => '85b73b',
+            'primary_button/primary_button_border_color_hover' => '76a334',
+            'secondary_button/button_bg_color' => '343434',
+            'secondary_button/button_bg_color_hover' => 'e2e2e2',
+            'secondary_button/button_color' => 'ffffff',
+            'secondary_button/button_color_hover' => '555555',
+            'secondary_button/button_border_color' => '343434',
+            'secondary_button/button_border_color_hover' => '343434',
+            'link/link_color' => '1a1a1a',
+            'link/link_color_hover' => '85b73b',
+            'icon/icon_color' => '7d7d7d',
+            'icon/icon_color_hover' => '1a1a1a',
+            'icon_header/icon_header_color' => '8f8f8f',
+            'icon_header/icon_header_color_hover' => '333333',
+            'input/input_background_color' => 'ffffff',
+            'input/input_placeholder_color' => 'c2c2c2',
+            'input/input_color' => '333333',
+            'input/input_border_color' => 'c2c2c2',
+            'header/header_panel_wrapper_bg_color' => 'f5f5f5',
+            'header/header_panel_wrapper_color' => '1a1a1a',
+            'header/header_bg_color' => 'ffffff',
+            'navigation/nav_bg_color' => 'e6e6e6',
+            'navigation/nav_item_color' => '575757',
+            'navigation/nav_item_color_hover' => '333333',
+            'navigation/sub_menu_item_bg_color' => 'ffffff',
+            'navigation/sub_menu_item_bg_color_hover' => 'f5f5f5',
+            'navigation/sub_menu_item_color' => '575757',
+            'navigation/sub_menu_item_color_hover' => '1a1a1a',
+            'subscribe/subscribe_bg_color' => 'e6e6e6',
+            'subscribe/subscribe_color' => '575757',
+            'footer/footer_bg_color'=> 'ffffff',
+            'copyright/copyright_bg_color'=> '343434',
+            'copyright/copyright_color' => 'cdcdcd'
+        ],
+        'silver' => [
+            'theme_color/primary' => '1a1a1a',
+            'theme_color/primary_alt'=> 'f5f5f5',
+            'theme_color/secondary'=> 'ba933e',
+            'basic/page_background_color' => 'ffffff',
+            'basic/text_color' => '333333',
+            'basic/border_color_base' => 'c2c2c2',
+            'basic/sidebar_background_color' => 'f5f5f5',
+            'primary_button/primary_button_bg_color' => 'ba933e',
+            'primary_button/primary_button_bg_color_hover' => '1a1a1a',
+            'primary_button/primary_button_color' => 'ffffff',
+            'primary_button/primary_button_color_hover' => 'ffffff',
+            'primary_button/primary_button_border_color' => 'ba933e',
+            'primary_button/primary_button_border_color_hover' => '1a1a1a',
+            'secondary_button/button_bg_color' => '343434',
+            'secondary_button/button_bg_color_hover' => 'e2e2e2',
+            'secondary_button/button_color' => 'ffffff',
+            'secondary_button/button_color_hover' => '555555',
+            'secondary_button/button_border_color' => '343434',
+            'secondary_button/button_border_color_hover' => '343434',
+            'link/link_color' => '1a1a1a',
+            'link/link_color_hover' => 'ba933e',
+            'icon/icon_color' => '7d7d7d',
+            'icon/icon_color_hover' => '1a1a1a',
+            'icon_header/icon_header_color' => '8f8f8f',
+            'icon_header/icon_header_color_hover' => '333333',
+            'input/input_background_color' => 'ffffff',
+            'input/input_placeholder_color' => 'c2c2c2',
+            'input/input_color' => '333333',
+            'input/input_border_color' => 'c2c2c2',
+            'header/header_panel_wrapper_bg_color' => 'f5f5f5',
+            'header/header_panel_wrapper_color' => '1a1a1a',
+            'header/header_bg_color' => 'ffffff',
+            'navigation/nav_bg_color' => 'e6e6e6',
+            'navigation/nav_item_color' => '575757',
+            'navigation/nav_item_color_hover' => '333333',
+            'navigation/sub_menu_item_bg_color' => 'ffffff',
+            'navigation/sub_menu_item_bg_color_hover' => 'f5f5f5',
+            'navigation/sub_menu_item_color' => '575757',
+            'navigation/sub_menu_item_color_hover' => '1a1a1a',
+            'subscribe/subscribe_bg_color' => 'e6e6e6',
+            'subscribe/subscribe_color' => '575757',
+            'footer/footer_bg_color'=> 'ffffff',
+            'copyright/copyright_bg_color'=> '343434',
+            'copyright/copyright_color' => 'cdcdcd'
+        ],
+        'black' => [
+            'theme_color/primary' => '1b1b1b',
+            'theme_color/primary_alt'=> '343434',
+            'theme_color/secondary'=> 'd23d43',
+            'basic/page_background_color' => '1b1b1b',
+            'basic/text_color' => 'cdcdcd',
+            'basic/border_color_base' => '858585',
+            'basic/sidebar_background_color' => '343434',
+            'primary_button/primary_button_bg_color' => 'd23d43',
+            'primary_button/primary_button_bg_color_hover' => '932a36',
+            'primary_button/primary_button_color' => 'ffffff',
+            'primary_button/primary_button_color_hover' => 'ffffff',
+            'primary_button/primary_button_border_color' => 'd23d43',
+            'primary_button/primary_button_border_color_hover' => '932a36',
+            'secondary_button/button_bg_color' => '343434',
+            'secondary_button/button_bg_color_hover' => 'e2e2e2',
+            'secondary_button/button_color' => 'ffffff',
+            'secondary_button/button_color_hover' => '555555',
+            'secondary_button/button_border_color' => '343434',
+            'secondary_button/button_border_color_hover' => '343434',
+            'link/link_color' => 'cdcdcd',
+            'link/link_color_hover' => 'd23d43',
+            'icon/icon_color' => 'e3e3e3',
+            'icon/icon_color_hover' => 'ffffff',
+            'icon_header/icon_header_color' => '8f8f8f',
+            'icon_header/icon_header_color_hover' => 'ffffff',
+            'input/input_background_color' => '343434',
+            'input/input_placeholder_color' => 'd1cfca',
+            'input/input_color' => 'd1cfca',
+            'input/input_border_color' => 'a8a69f',
+            'header/header_panel_wrapper_bg_color' => '858585',
+            'header/header_panel_wrapper_color' => 'ffffff',
+            'header/header_bg_color' => '1b1b1b',
+            'navigation/nav_bg_color' => '343434',
+            'navigation/nav_item_color' => 'cdcdcd',
+            'navigation/nav_item_color_hover' => 'ffffff',
+            'navigation/sub_menu_item_bg_color' => '343434',
+            'navigation/sub_menu_item_bg_color_hover' => '858585',
+            'navigation/sub_menu_item_color' => 'e6e6e6',
+            'navigation/sub_menu_item_color_hover' => 'ffffff',
+            'subscribe/subscribe_bg_color' => '040404',
+            'subscribe/subscribe_color' => 'cdcdcd',
+            'footer/footer_bg_color'=> '343434',
+            'copyright/copyright_bg_color'=> '1b1b1b',
+            'copyright/copyright_color' => 'cdcdcd'
+        ]
+    ];
+?>
+
+<script type="text/javascript">
+
+    var colorSchemaPresets = JSON.parse('<?= json_encode($colorSchemaPresets)?>');
+
+    function reloadPage()
+    {
+        require([
+            'jquery', 'Magento_Ui/js/modal/confirm'], function ($, confirmation) {
+            'use strict';
+
+            confirmation({
+                title: $.mage.__('Page will be reloaded!'),
+                content: $('.confirmation-modal-content'),
+                buttons: [{
+                    text: $.mage.__('Cancel'),
+                    class: 'action-secondary action-dismiss',
+                    click: function (event) {
+                        this.closeModal(event);
+                    }
+                }, {
+                    text: $.mage.__('OK'),
+                    class: 'action-primary action-accept',
+                    click: function (event) {
+                        window.location.reload();
+                        this.closeModal(event, true);
+                    }
+                }]
+            });
+        });
+    }
+
+    function changeColorSchema(colorSwatch, color) {
+        if (color == 'current') {
+            reloadPage();
+            return;
+        }
+
+        var colorSwatches = document.querySelectorAll('#color-preset .active');
+
+        Array.prototype.forEach.call(colorSwatches, function(el, i) {
+            el.classList.remove('active');
+        });
+
+        colorSwatch.classList.add('active');
+
+        document.querySelector('#color-preset .reset').classList.remove('hidden');
+
+
+        if (colorSchemaPresets.hasOwnProperty(color)) {
+            for (elementSelector in colorSchemaPresets[color]) {
+                let colorCode = colorSchemaPresets[color][elementSelector];
+                let colorInput = document.querySelector('input[id$='+elementSelector.replace('/', '_')+']');
+
+                if (colorInput) {
+                    colorInput.value = colorCode;
+                    colorInput.style.backgroundColor = '#' + colorCode;
+                    colorInput.style.color = invertColor('#' + colorCode);
+                }
+            }
+
+            // open all fieldsets after change color schema
+            var fildsets = document.querySelectorAll('#mfthemefo_color_scheme .section-config:not(.active) div.admin__collapsible-block');
+            Array.prototype.forEach.call(fildsets, function(el, i) {
+                el.closest('.section-config').classList.add('active');
+                el.querySelector('a').classList.add('opened');
+                el.closest('.section-config').querySelector('input[type="hidden"]').value = 1;
+                el.closest('.section-config').querySelector('fieldset').style.display = "block";
+            });
+        }
+    }
+
+    const invertColor = (bg) => {
+        bg=parseInt(Number(bg.replace('#', '0x')), 10)
+        bg=~bg
+        bg=bg>>>0
+        bg=bg&0x00ffffff
+        bg='#' + bg.toString(16).padStart(6, "0")
+
+        return bg
+    }
+</script>

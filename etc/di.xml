@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Css\PreProcessor\File\Temporary">
+        <plugin name="Magefan_ThemeOptimized_Plugin_Magento_Framework_Css_PreProcessor_File_Temporary" type="Magefan\ThemeOptimized\Plugin\Magento\Framework\Css\PreProcessor\File\Temporary" sortOrder="10" disabled="false"/>
+    </type>
+
+    <type name="Magefan\ThemeOptimized\Plugin\Magento\Framework\Css\PreProcessor\File\Temporary">
+        <arguments>
+            <argument name="emulation" xsi:type="object">Magento\Store\Model\App\Emulation\Proxy</argument>
+            <argument name="transferConfigProcessors" xsi:type="array">
+                <item name="color" xsi:type="object">Magefan\ThemeOptimized\Model\TransferConfigProcessor\Color</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\Filter\Template">
+        <arguments>
+            <argument name="directiveProcessors" xsi:type="array">
+                <item name="color" xsi:type="object">Magefan\ThemeOptimized\Model\Template\Filter\DirectiveProcessor\Color</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
