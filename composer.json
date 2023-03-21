@@ -2,7 +2,6 @@
     "name": "magefan/module-theme-optimized",
     "description": "Module is a part of optimized theme.",
     "type": "magento2-module",
-    "license": "EULA",
     "version": "2.0.0",
     "autoload": {
         "files": [
