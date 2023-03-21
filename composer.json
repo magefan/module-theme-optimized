@@ -1,15 +1,8 @@
 {
     "name": "magefan/module-theme-optimized",
     "description": "Module is a part of optimized theme.",
-    "require": {
-        "magefan/module-blog" : ">=2.10.12",
-        "magefan/module-lazyload" : ">=2.0.19",
-        "magefan/module-rocketjavascript" : ">=2.1.6",
-        "magefan/module-translation": ">=2.1.10",
-        "magefan/module-html-sitemap": ">=2.1.0",
-        "magefan/module-xml-sitemap": ">=2.0.0"
-    },
     "type": "magento2-module",
+    "license": "EULA",
     "version": "2.0.0",
     "autoload": {
         "files": [
