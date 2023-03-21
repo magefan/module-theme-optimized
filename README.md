@@ -1,5 +1,3 @@
-# module-theme-optimized
-
 # Help module for [Magento 2 Theme Optimized](https://github.com/magefan/theme-frontend-optimized) by Magefan
 
 [![Total Downloads](https://poser.pugx.org/magefan/module-theme-optimized/downloads)](https://packagist.org/packages/magefan/module-theme-optimized)
