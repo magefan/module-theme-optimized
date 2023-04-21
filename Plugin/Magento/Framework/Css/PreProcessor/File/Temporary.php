@@ -55,6 +55,11 @@ class Temporary
      * @var array|mixed
      */
     private $transferConfigProcessors;
+    
+    /**
+     * @var
+     */
+    private $storeThemeMap;
 
     public function __construct(
         Emulation $emulation,
