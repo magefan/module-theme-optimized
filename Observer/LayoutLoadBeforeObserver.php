@@ -18,6 +18,11 @@ class LayoutLoadBeforeObserver implements ObserverInterface
      * @var ProductRepositoryInterface
      */
     private $productRepository;
+    
+    /**
+     * @var RequestInterface 
+     */
+    private $request;
 
     public function __construct(
         RequestInterface $request,
