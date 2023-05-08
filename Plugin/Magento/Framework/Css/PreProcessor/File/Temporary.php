@@ -19,15 +19,47 @@ use Magento\Theme\Model\ResourceModel\Theme\CollectionFactory as ThemeCollection
 
 class Temporary
 {
-    /**
-     * @var array
-     */
-    private $transferConfigProcessors;
+
 
     /**
      * @var Emulation
      */
     private $emulation;
+
+    /**
+     * @var State
+     */
+    private $state;
+
+    /**
+     * @var StoreRepositoryInterface
+     */
+    private $storeRepository;
+
+    /**
+     * @var ScopeConfigInterface
+     */
+    private $scopeConfig;
+
+    /**
+     * @var ThemeCollectionFactory
+     */
+    private $themeCollectionFactory;
+
+    /**
+     * @var DesignInterface
+     */
+    private $design;
+
+    /**
+     * @var array|mixed
+     */
+    private $transferConfigProcessors;
+    
+    /**
+     * @var
+     */
+    private $storeThemeMap;
 
     public function __construct(
         Emulation $emulation,
