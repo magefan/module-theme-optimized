@@ -42,7 +42,7 @@ class LayoutLoadBeforeObserver implements ObserverInterface
             $product = $this->productRepository->getById($productId);
 
             if (!$product->getShortDescription()) {
-                if (strlen($product->getDescription()) <= '700') {
+                if (strlen((string)$product->getDescription()) <= '700') {
                     $observer->getLayout()->getUpdate()->addHandle('move_catalog_product_view');
                 }
             }
