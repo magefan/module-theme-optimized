@@ -70,13 +70,19 @@
                 </navigation>
                 <product_items>
                     <product_items_bg_color>ffffff</product_items_bg_color>
-                    <product_items_color>cdcdcd</product_items_color>
-                    <product_items_border_color>ffffff</product_items_border_color>
+                    <product_items_color>333333</product_items_color>
+                    <product_items_border_color>f3f3f3</product_items_border_color>
                     <product_items_border_color_hover>c2c2c2</product_items_border_color_hover>
-<!--                    <product_items_border_radius>0</product_items_border_radius>-->
-<!--                    <product_items_box_shadow_color></product_items_box_shadow_color>-->
-<!--                    <product_items_box_shadow_color_hover></product_items_box_shadow_color_hover>-->
                 </product_items>
+                <swatch>
+                    <attr_swatch_option_color>868686</attr_swatch_option_color>
+                    <swatch_option_text_color>646464</swatch_option_text_color>
+                    <swatch_option_hover_color>333333</swatch_option_hover_color>
+                </swatch>
+                <price>
+                    <price_color>333333</price_color>
+                    <old_price_color>868686</old_price_color>
+                </price>
                 <subscribe>
                     <subscribe_bg_color>e6e6e6</subscribe_bg_color>
                     <subscribe_color>575757</subscribe_color>
