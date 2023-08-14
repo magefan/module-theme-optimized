@@ -17,7 +17,7 @@
                 <basic>
                     <page_background_color>ffffff</page_background_color>
                     <text_color>333333</text_color>
-                    <border_color_base>c2c2c2</border_color_base>
+                    <border_color_base>f1f1f1</border_color_base>
                     <sidebar_background_color>f5f5f5</sidebar_background_color>
                 </basic>
                 <primary_button>
@@ -52,7 +52,7 @@
                     <input_background_color>ffffff</input_background_color>
                     <input_placeholder_color>c2c2c2</input_placeholder_color>
                     <input_color>333333</input_color>
-                    <input_border_color>c2c2c2</input_border_color>
+                    <input_border_color>f1f1f1</input_border_color>
                 </input>
                 <header>
                     <header_panel_wrapper_bg_color>f5f5f5</header_panel_wrapper_bg_color>

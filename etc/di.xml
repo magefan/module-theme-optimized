@@ -26,4 +26,6 @@
             </argument>
         </arguments>
     </type>
+    <preference for="Magento\Wishlist\CustomerData\Wishlist" type="Magefan\ThemeOptimized\CustomerData\Wishlist" />
+    <preference for="Magento\Catalog\CustomerData\CompareProducts" type="Magefan\ThemeOptimized\CustomerData\CompareProducts" />
 </config>
