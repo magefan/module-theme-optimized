@@ -1,0 +1,165 @@
+title,page_layout,meta_keywords,meta_description,identifier,content_heading,content,is_active,sort_order,layout_update_xml,custom_theme,custom_root_template,custom_layout_update_xml,custom_theme_from,custom_theme_to
+Magefan Home Page,1column,,,home-page,Home Page,"<style>
+    .cms-home_page .column.main {padding-left: 15px;padding-right: 15px;}
+    .home-block-1 {margin-bottom: 60px;overflow: hidden;}
+    .home-block-1 * {box-sizing: border-box;}
+
+    .home-block-1 .blocks-content .blocks-content-wrapper {}
+    .home-block-1 .block-left {width: 38%;float: left;position: relative;overflov: hidden;}
+    .home-block-1 .block-left img {max-width: 100%;}
+    .home-block-1 .block-label {display: block;position: absolute;padding: 20px 30px;bottom: 0;left: 0;}
+    .home-block-1 .block-label .title {font-family: ""Open Sans Semibold"", sans-serif;font-size: 50px;line-height: 50px;color: #ffffff;}
+    .home-block-1 .block-label .more {display: inline-block;width: 53px;height: 29px;
+        background: url(""{{media url=wysiwyg/home/new/arrow-right.png}}"") no-repeat 0 0;
+        /*background: url(""../images/arrow-right.png"") no-repeat 0 0;*/
+        background-size: cover;margin-left: 10px;}
+    .home-block-1 a.link {display: block;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 2;text-decoration: none}
+    .home-block-1 .block-right {width: calc(60% - 20px);margin-left: 20px;float: left;}
+    .home-block-1 .row-1 {height: calc(50% - 10px);margin-bottom: 20px;position: relative;overflov: hidden;}
+    .home-block-1 .row-2 {height: calc(50% - 10px);display: flex;}
+    .home-block-1 .block-right .row-2 > .row-2-1 {width: 57%;position: relative;overflov: hidden;}
+    .home-block-1 .block-right .row-2 > .row-2-2 {width: 40%;position: relative;margin-left: 20px;overflov: hidden;}
+    .home-block-1 .block-right .row-2 > .row-2-2 .all-screen {width: 100%;height: auto;max-width: 282px;display: block;}
+    .home-block-1 .circle {position: absolute;top: 0;left: 0;right: 0;bottom: 0;display: flex;align-items: center;justify-content: center;}
+    .home-block-1 .circle .arrow-brown {width: 22px;height: 13px;display: inline-block;margin-left: 10px;margin-top: -2px;}
+    .home-block-1 .mfwebp  {display: contents;}
+
+    .home-block-3 {margin-bottom: 90px;}
+    .home-block-3 .content-heading {font-size: 40px;}
+    .home-block-3 .content-heading:before {content: none;}
+    .home-block-3 .content-heading .info {color: #858585;font-size: 23px;}
+
+    .home-block-4 {margin: 90px 0;}
+    .home-block-4 .blocks-content {background: linear-gradient(67deg, #F8D44C 0%, #EAEC77 100%);}
+    .home-block-4 .blocks-content {padding: 0 50px;}
+    .home-block-4 .blocks-content .blocks-content-wrapper {display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;}
+    .home-block-4 .blocks-content .sale {width: 35%;
+        background: url(""{{media url=wysiwyg/home/new/sale-tr.png}}"") no-repeat center center;
+        /*background: url(""../images/sale-tr.png"") no-repeat center center;*/
+        min-height: 254px;background-size: cover;}
+    .home-block-4 .blocks-content .sale {}
+    .home-block-4 .blocks-content .block-title {width: 30%;}
+    .home-block-4 .blocks-content .actions {width: 30%;text-align: right;}
+    .home-block-4 .blocks-content .actions .action.primary.show-more {padding: 17px 30px;font-size: 18px;width: 100%;max-width: 216px;text-align: center;}
+    @media (min-width: 640px) {
+        .home-block-1 .block-right .row-2 > .row-2-1 .title {display: none;}
+        .home-block-1 .block-right .row-2 > .row-2-1 .more {display: none;}
+        .home-block-1 .desctop {display: block;}
+        .home-block-1 .mobile {display: none;}
+    }
+    @media (max-width: 767px) {
+        .home-block-4 .blocks-content {padding: 0;}
+        .home-block-4 .blocks-content .blocks-content-wrapper {flex-direction: column;}
+        .home-block-4 .blocks-content .sale {background-size: contain;width: 100%;background-position: 0;}
+        .home-block-4 .blocks-content .block-title {width: 100%;text-align: center;}
+        .home-block-4 .blocks-content .block-title p {padding: 0 20px;}
+        .home-block-4 .blocks-content .actions {width: 100%;text-align: center;margin: 40px 0;}
+    }
+    @media (max-width: 639px) {
+        .home-block-1 .block-left {width: 100%;float: none;margin-bottom: 20px;}
+        .home-block-1 .block-left img {width: 100%;height: auto;}
+        .home-block-1 .block-right {width: 100%;float: none;margin: 0;overflow: hidden;display: flex;}
+        .home-block-1 .row-1 {width: calc(50% - 10px);margin: 0;float: left;}
+        .home-block-1 .row-1 img {width: 100%;height: auto;}
+        .home-block-1 .row-2 {width: calc(50% - 10px);margin: 0 0 0 20px;float: left;flex-direction: column;height: auto;}
+        .home-block-1 .block-right .row-2 > .row-2-1 {width: 100%;margin-bottom: 20px;height: calc(45% - 10px);}
+        .home-block-1 .block-right .row-2 > .row-2-1 img {width: 100%;height: 100%;}
+        .home-block-1 .block-right .row-2 > .row-2-2 {width: 100%;margin: 0;height: 100%;}
+
+        .home-block-1 .block-label {left: 0;top: 0;}
+        .home-block-1 .block-label .title {font-size: 23px;line-height: 30px;}
+        .home-block-1 .block-label .more {width: 29px;height: 16px;background-size: cover;}
+        .home-block-1 .desctop {display: none;}
+        .home-block-1 .mobile {display: block;}
+    }
+</style>
+
+
+<!-- Block 1 -->
+<div class=""home-block-1"">
+    <div class=""blocks-content"">
+        <div class=""blocks-content-wrapper"">
+            <div class=""block-left"">
+                <img class=""desctop"" src=""{{media url=wysiwyg/home/new/home-page-block-1.png}}"" alt="""" />
+                <img class=""mobile"" src=""{{media url=wysiwyg/home/new/home-page-block-1-mobile.png}}"" alt="""" />
+                <div class=""block-label"" style=""color: #ffffff;"">
+                    <div class=""title"">Clothes<br> and Shoes<div class=""more""></div></div>
+                </div>
+                <a class=""link"" href=""#"">&nbsp;</a>
+            </div>
+
+            <div class=""block-right"">
+                <div class=""row-1"">
+                    <img class=""desctop"" src=""{{media url=wysiwyg/home/new/home-page-block-2.png}}"" alt="""" />
+                    <img class=""mobile"" src=""{{media url=wysiwyg/home/new/home-page-block-2-mobile.png}}"" alt="""" />
+                    <div class=""block-label"" style=""color: #ffffff;"">
+                        <div class=""title"">Plumbing<br> and repair<div class=""more""></div></div>
+                    </div>
+                    <a class=""link"" href=""#"">&nbsp;</a>
+                </div>
+                <div class=""row-2"">
+                    <div class=""row-2-1"">
+                        <img class=""desctop"" src=""{{media url=wysiwyg/home/new/home-page-block-3.png}}"" alt="""" />
+                        <img class=""mobile"" src=""{{media url=wysiwyg/home/new/home-page-block-3-mobile.png}}"" alt="""" />
+                        <div class=""block-label"" style=""color: #ffffff;"">
+                            <div class=""title"">Household<br> products<div class=""more""></div></div>
+                        </div>
+                        <a class=""link"" href=""#"">&nbsp;</a>
+                    </div>
+                    <div class=""row-2-2"">
+                        <img class=""all-screen"" src=""{{media url=wysiwyg/home/new/home-page-block-4.png}}"" alt="""" />
+                        <div class=""circle"">See All <img class=""arrow-brown"" src=""{{media url=wysiwyg/home/new/arrow-right-brown.png}}"" alt=""""></div>
+                        <a class=""link"" href=""#"">&nbsp;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Block 1 -->
+
+<!-- Block 2 -->
+<div class=""home-block-2"">
+    {{block class=""Magento\Cms\Block\Block"" block_id=""home_page_block_category""}}
+</div>
+<!-- END Block 2 -->
+
+<!-- Block 3 -->
+<div class=""home-block-3"">
+    <div class=""content-heading"">
+        <h2 class=""title"">Hot Sellers</h2>
+        <p class=""info"">Here is what`s trending on Optimized right now</p>
+    </div>
+
+    {{widget type=""Magento\CatalogWidget\Block\Product\ProductsList"" products_count=""5"" template=""product/widget/content/grid.phtml"" conditions_encoded=""^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`eco_collection`,`operator`:`==`,`value`:`1`^],`1--2`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`new`,`operator`:`==`,`value`:`1`^]^]""}}
+</div>
+<!-- END Block 3 -->
+
+<!-- Block 4 -->
+<div class=""home-block-4"">
+    <div class=""blocks-content"">
+        <div class=""blocks-content-wrapper"">
+            <div class=""sale"">
+                <!--                <img class=""desctop"" src=""{{media url=wysiwyg/home/new/sale-tr.png}}"" alt="""" />-->
+            </div>
+            <div class=""block-title"">
+                <h3 style=""color: #1E1E1E;font-size: 36px;font-family: Open Sans;font-weight: 700;"">Up to 50% Off</h3>
+                <p style=""color: #333;font-size: 21px;font-family: Open Sans;"">Subscribe to learn about the best deals before they go live and receive personalized discounts</p>
+            </div>
+            <div class=""actions"">
+                <a class=""action primary show-more"" rel=""nofollow"" href=""{{store url='sale.html'}}"" title=""Show more"">Show more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Block 4 -->
+
+<!-- Block 5 -->
+<div class=""home-block-5"">
+    {{widget type=""Magento\CatalogWidget\Block\Product\ProductsList"" products_count=""5"" template=""product/widget/content/grid.phtml"" conditions_encoded=""^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`eco_collection`,`operator`:`==`,`value`:`1`^],`1--2`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`new`,`operator`:`==`,`value`:`1`^]^]""}}
+</div>
+<!-- END Block 5 -->
+
+
+",1,,,,,,,
+Subscribe To Our Newsletter,1column,,,subscription,,"{{block class=""Magento\Framework\View\Element\Template"" template=""Magento_Newsletter::subscription.phtml"" }}",,,,,,,,

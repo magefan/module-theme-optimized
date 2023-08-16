@@ -34,8 +34,6 @@
 // Link
 @link__color: {{color (link/link_color)}};
 @link__hover__color: {{color (link/link_color_hover)}};
-// @link__visited__color: @link__color;
-// @link__active__color: @active__color;
 
 // Icons
 @icon_color: {{color (icon/icon_color)}};
@@ -45,8 +43,6 @@
 @icon-font__color: {{color (icon/icon_color)}};
 @icon-font__color-hover: {{color (icon/icon_color_hover)}};
 @_icon-font-color-active: @icon-font__color-hover;
-// @_icon-font-color: @icon-font__color;
-// @_icon-font-color-hover: @icon-font__color-hover;
 
 // Form
 // @form-element-input__background: @color-gray89;
@@ -56,19 +52,10 @@
 // @form-element-input__border: 1px solid @form-element-input__border-color;
 @form-element-input__color: {{color (input/input_color)}};
 // Placeholder
-// @form-element-input-placeholder__color: @color-gray60;
 @form-element-input-placeholder__color: {{color (input/input_placeholder_color)}};
 // Autofill
 @form-element_autofill__background: {{color (input/input_background_color)}};
 @form-element_autofill__color: {{color (input/input_color)}};
-
-// Tabs
-@tab-control__background-color: @page__background-color;
-
-// @navigation__background: @color-gray40;
-// @navigation-desktop-level0-item__color: @color-gray80;
-// @navigation-desktop-level0-item__hover__color: @color-gray34;
-// @navigation-desktop-level0-item__active__color: @navigation-desktop-level0-item__color;
 
 // Header
 @header__background-color: {{color (header/header_bg_color)}};
@@ -89,7 +76,6 @@
 
 // Navigation Desktop
 @navigation__background: {{color (navigation/nav_bg_color)}};
-//@navigation__background__hover: {{color (navigation/sub_menu_item_bg_color_hover)}};
 @navigation-desktop-level0-item__color: {{color (navigation/nav_item_color)}};
 @navigation-desktop-level0-item__hover__color: {{color (navigation/nav_item_color_hover)}};
 @navigation-desktop-level0-item__active__color: {{color (navigation/nav_item_color_hover)}};
@@ -99,16 +85,8 @@
 @submenu-desktop-item__hover__color: {{color (navigation/sub_menu_item_color_hover)}};
 @submenu-desktop-item__background: {{color (navigation/sub_menu_item_bg_color)}};
 @submenu-desktop-item__hover__background: {{color (navigation/sub_menu_item_bg_color_hover)}};
-//@submenu-desktop-item__active__color: ;
-//@submenu-desktop-item__active__border-color: ;
-
-// Collapsible menu
-//@collapsible-nav-background: ;
-//@collapsible-nav-item-hover: ;
 
 // Breadcrumbs
-//@_breadcrumbs-link-color: {{color (link/link_color)}};
-//@_breadcrumbs-link-color-visited: {{color (link/link_color)}};
 @_breadcrumbs-link-color: {{color (basic/text_color)}};
 @_breadcrumbs-link-color-visited: {{color (basic/text_color)}};
 @_breadcrumbs-current-color: {{color (basic/text_color)}};
@@ -120,6 +98,20 @@
 @product_items_border_color_hover: {{color (product_items/product_items_border_color_hover)}};
 @product_items_border_radius: {{color (product_items/product_items_border_radius)}};
 
+// Swatch
+@attr-swatch-option__color: {{color (swatch/attr_swatch_option_color)}};
+@swatch-option-text__color: {{color (swatch/swatch_option_text_color)}};
+@swatch-option__hover__color: {{color (swatch/swatch_option_hover_color)}};
+
+// Price
+@price_color: {{color (price/price_color)}};
+@old_price_color: {{color (price/old_price_color)}};
+
+// Tabs
+@tab-control__background-color: @page__background-color;
+@tab-control__color: @navigation-desktop-level0-item__color;
+@tab-control__hover__color: @navigation-desktop-level0-item__hover__color;
+@tab-control__active__color: @navigation-desktop-level0-item__hover__color;
 
 // Subscribe
 @subscribe-bg-color: {{color (subscribe/subscribe_bg_color)}};

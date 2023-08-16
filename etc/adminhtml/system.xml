@@ -303,7 +303,7 @@
                         <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
                     </field>
                     <field id="product_items_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Product Color</label>
+                        <label>Product Name Color</label>
                         <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                         <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
                     </field>
@@ -322,7 +322,45 @@
                     </depends>
                 </group>
 
-                <group id="subscribe" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                <group id="swatch" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Swatch</label>
+                    <field id="attr_swatch_option_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Swatch Attribute Text Color</label>
+                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    </field>
+                    <field id="swatch_option_text_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Swatch Options Text Color</label>
+                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    </field>
+                    <field id="swatch_option_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Swatch Option Text Hover Color</label>
+                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    </field>
+                </group>
+
+                <group id="price" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Price</label>
+                    <field id="price_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Normal Price Color</label>
+                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    </field>
+                    <field id="old_price_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Old Price Color</label>
+                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    </field>
+<!--                    <field id="special_price_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">-->
+<!--                        <label>Special Price Color</label>-->
+<!--                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>-->
+<!--                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>-->
+<!--                    </field>-->
+                </group>
+
+                <group id="subscribe" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Subscribe</label>
                     <field id="subscribe_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Subscribe Background Color</label>
@@ -339,7 +377,7 @@
                     </depends>
                 </group>
 
-                <group id="footer" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                <group id="footer" translate="label" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Footer</label>
                     <field id="footer_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Footer Background Color</label>
@@ -351,7 +389,7 @@
                     </depends>
                 </group>
 
-                <group id="copyright" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                <group id="copyright" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Copyright</label>
                     <field id="copyright_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Copyright Background Color</label>
