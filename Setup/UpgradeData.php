@@ -15,6 +15,7 @@ use Magento\Cms\Model\PageFactory;
 use Magento\Cms\Model\BlockFactory;
 use Magento\UrlRewrite\Model\ResourceModel\UrlRewriteCollectionFactory;
 use Magento\Cms\Api\PageRepositoryInterface;
+use Magefan\ThemeOptimized\Model\Media;
 
 /**
  * Upgrade Data script
@@ -58,7 +59,11 @@ class UpgradeData implements UpgradeDataInterface
     protected $state;
 
     /**
-     * UpgradeData constructor.
+     * @var Media
+     */
+    protected $media;
+
+    /**
      * @param Setup\SampleData\Executor $executor
      * @param Updater $updater
      * @param PageFactory $pageFactory
@@ -66,6 +71,7 @@ class UpgradeData implements UpgradeDataInterface
      * @param PageRepositoryInterface $pageRepository
      * @param UrlRewriteCollectionFactory $urlRewriteCollectionFactory
      * @param \Magento\Framework\App\State $state
+     * @param Media $media
      */
     public function __construct(
         Setup\SampleData\Executor $executor,
@@ -74,7 +80,8 @@ class UpgradeData implements UpgradeDataInterface
         BlockFactory $blockFactory,
         PageRepositoryInterface $pageRepository,
         UrlRewriteCollectionFactory $urlRewriteCollectionFactory,
-        \Magento\Framework\App\State $state
+        \Magento\Framework\App\State $state,
+        Media $media
     ) {
         $this->executor = $executor;
         $this->updater = $updater;
@@ -83,6 +90,7 @@ class UpgradeData implements UpgradeDataInterface
         $this->pageRepository = $pageRepository;
         $this->urlRewriteCollectionFactory = $urlRewriteCollectionFactory;
         $this->state = $state;
+        $this->media = $media;
     }
 
     /**
@@ -101,19 +109,22 @@ class UpgradeData implements UpgradeDataInterface
 
         }
 
-        if (version_compare($context->getVersion(), '1.1.1', '<')) {
-            $this->updater->setCmsBlocksData('Magefan_ThemeOptimized::fixtures/blocks/blocks_1.1.1.csv');
-            $this->updater->setCmsPagesData('Magefan_ThemeOptimized::fixtures/pages/pages_1.1.1.csv');
+        if (version_compare($context->getVersion(), '2.0.1', '<')) {
+            $this->updater->setCmsBlocksData('Magefan_ThemeOptimized::fixtures/blocks/blocks_2.0.1.csv');
+            $this->updater->setCmsPagesData('Magefan_ThemeOptimized::fixtures/pages/pages_2.0.1.csv');
             $this->executor->exec($this->updater);
         }
 
-        if (version_compare($context->getVersion(), '2.0.0', '<')) {
-            $this->updater->setCmsBlocksData('Magefan_ThemeOptimized::fixtures/blocks/blocks_2.0.0.csv');
-            $this->updater->setCmsPagesData('Magefan_ThemeOptimized::fixtures/pages/pages_2.0.0.csv');
-            $this->executor->exec($this->updater);
-        }
-
+        $this->updateMediaFiles();
 
         $setup->endSetup();
+    }
+
+    /**
+     * @throws \Magento\Framework\Exception\FileSystemException
+     */
+    private function updateMediaFiles()
+    {
+        $this->media->copyToPubMedia(__DIR__ . '/../pub');
     }
 }
