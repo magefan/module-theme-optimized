@@ -45,8 +45,8 @@
                     <icon_color_hover>1a1a1a</icon_color_hover>
                 </icon>
                 <icon_header>
-                    <icon_color>8f8f8f</icon_color>
-                    <icon_color_hover>333333</icon_color_hover>
+                    <icon_header_color>8f8f8f</icon_header_color>
+                    <icon_header_color_hover>333333</icon_header_color_hover>
                 </icon_header>
                 <input>
                     <input_background_color>ffffff</input_background_color>
