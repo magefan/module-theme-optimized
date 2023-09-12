@@ -406,6 +406,14 @@
                     </depends>
                 </group>
             </group>
+
+            <group id="gallery" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Gallery</label>
+                <field id="thumbs_direction" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Gallery Thumbs Direction</label>
+                    <source_model>Magefan\ThemeOptimized\Model\Config\Source\GalleryThumbsDirection</source_model>
+                </field>
+            </group>
         </section>
     </system>
 </config>

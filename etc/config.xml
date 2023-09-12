@@ -95,6 +95,9 @@
                     <copyright_color>cdcdcd</copyright_color>
                 </copyright>
             </color_scheme>
+            <gallery>
+                <thumbs_direction>horizontal</thumbs_direction>
+            </gallery>
         </mfthemefo>
     </default>
 </config>
