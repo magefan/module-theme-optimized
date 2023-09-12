@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Wishlist\CustomerData\Wishlist">
+        <plugin name="remove-item-and-items-string-wishlist" type="Magefan\ThemeOptimized\Plugin\Frontend\Magento\LeaveOnlyNumbers" sortOrder="10" disabled="false"/>
+    </type>
+
+    <type name="Magento\Catalog\CustomerData\CompareProducts">
+        <plugin name="remove-item-and-items-string-compare" type="Magefan\ThemeOptimized\Plugin\Frontend\Magento\LeaveOnlyNumbers" sortOrder="10" disabled="false"/>
+    </type>
+</config>
