@@ -162,4 +162,4 @@ Magefan Home Page,1column,,,home-page,Home Page,"<style>
 
 
 ",1,,,,,,,
-Subscribe To Our Newsletter,1column,,,subscription,,"{{block class=""Magento\Framework\View\Element\Template"" template=""Magento_Newsletter::subscription.phtml"" }}",,,,,,,,
+Subscribe To Our Newsletter,1column,,,subscription,,"{{block class=""Magento\Framework\View\Element\Template"" template=""Magento_Newsletter::subscription.phtml"" }}",1,,,,,,,
