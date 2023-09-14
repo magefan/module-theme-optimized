@@ -15,6 +15,8 @@ class Config
 
     const XML_PATH_TO_COLOR_SCHEME = 'mfthemefo/color_scheme/';
 
+    const XML_PATH_TO_GALLERY_THUMBS_DIRECTION = 'mfthemefo/gallery/thumbs_direction';
+
     /**
      * @var ScopeConfigInterface
      */
@@ -39,6 +41,14 @@ class Config
         return (string)$this->getConfig(self::XML_PATH_TO_COLOR_SCHEME . $fieldName, $storeId);
     }
 
+    /**
+     * @param null $storeId
+     * @return string
+     */
+    public function getGalleryThumbsDirection($storeId = null): string
+    {
+        return (string)$this->getConfig(self::XML_PATH_TO_GALLERY_THUMBS_DIRECTION, $storeId);
+    }
 
     /**
      * Retrieve store config value

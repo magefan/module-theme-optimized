@@ -1,0 +1,179 @@
+title,identifier,content,is_active
+Magefan Footer Static Block,footer-static-block,"<div class=""col-items"">
+<div class=""col-item"">
+<h3 class=""col-title"">CONTACT INFO</h3>
+<div class=""col-content"">
+<div class=""contact-info-block"">
+<ul class=""contact-details"">
+<li>{{config path=""general/store_information/postcode""}}, {{config path=""general/store_information/street_line1""}, {{config path=""general/store_information/city""}}, {{config path=""general/store_information/country_id""}}</li>
+<li><strong><a href=""tel:{{config path=""general/store_information/phone""}}"">{{config path=""general/store_information/phone""}}</a></strong></li>
+<li><a href=""mailto:{{config path=""trans_email/ident_general/email""}}"">{{config path=""trans_email/ident_general/email""}}</a></li>
+<li>{{config path=""general/store_information/hours""}}</li>
+</ul>
+</div>
+</div>
+</div>
+<div class=""col-item"">
+<h3 class=""col-title"">CUSTOM LINKS</h3>
+<div class=""col-content"">
+<ul class=""custom-links"">
+<li class=""nav item""><a href=""{{store url=""about-us""}}"">About us</a></li>
+<li class=""nav item""><a href=""{{store url=""customer-service""}}"">Customer Service</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-item"">
+<h3 class=""col-title"">INFOMATION</h3>
+<div class=""col-content"">
+<ul>
+<li class=""nav item""><a href=""{{store url=""search/term/popular""}}"">Search Terms</a></li>
+<li class=""nav item""><a href=""{{store url=""privacy-policy-cookie-restriction-mode""}}"">Privacy and Cookie Policy</a></li>
+<li class=""nav item""><a href=""{{store url=""catalogsearch/advanced""}}"">Advanced Search</a></li>
+<li class=""nav item""><a href=""{{store url=""sales/guest/form/""}}"">Orders and Returns</a></li>
+<li class=""nav item""><a href=""{{store url=""contact""}}"">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=""col-item"">
+<h3 class=""col-title"">FOLOW US</h3>
+<div class=""col-content f-none"">{{widget type=""Magento\Cms\Block\Widget\Block"" template=""widget/static_block/default.phtml"" block_id=""magefan_social_link_v3""}}</div>
+</div>
+</div>",1
+Magefan Home Page Block Category,home_page_block_category,"<style>
+    :root {
+        --swiper-scrollbar-right: 0px;
+        --swiper-scrollbar-bg-color: transparent;
+        --swiper-scrollbar-drag-bg-color: #BA933E;
+    }
+    .home-block-2 {margin-bottom: 90px;}
+    .home-block-2 .swiper {width: 100%;}
+    .home-block-2 .swiper-wrapper {margin-bottom: 40px;}
+    .home-block-2 .cat-item {display: flex;align-items: center;background: #F1F1F1;padding: 40px;}
+    .home-block-2 .cat-item .block-icon {min-width: 84px;height: 84px;margin-right: 12px;display: flex;align-items: center;}
+    .home-block-2 .mfwebp {display: contents;}
+    .home-block-2 .cat-item .block-title {font-size: 18px;font-weight: 600;text-transform: capitalize;min-width: 120px;color: #333333;}
+    .home-block-2 [data-content-type=html] {display: block;}
+</style>
+<div class=""blocks-content"">
+    <div class=""swiper"">
+        <div class=""swiper-wrapper"">
+            <div class=""swiper-slide"">
+                <div class=""cat-item"">
+                    <div class=""block-icon"">
+                        <img class=""desctop"" src=""{{media url=wysiwyg/home/new/category-icon-1.png}}"" alt="""" />
+                    </div>
+                    <div class=""block-title"">Clothes and Shoes</div>
+                </div>
+            </div>
+            <div class=""swiper-slide"">
+                <div class=""cat-item"">
+                    <div class=""block-icon"">
+                        <img class=""desctop"" src=""{{media url=wysiwyg/home/new/category-icon-2.png}}"" alt="""" />
+                    </div>
+                    <div class=""block-title"">Plumbing and Repair</div>
+                </div>
+            </div>
+            <div class=""swiper-slide"">
+                <div class=""cat-item"">
+                    <div class=""block-icon"">
+                        <img class=""desctop"" src=""{{media url=wysiwyg/home/new/category-icon-3.png}}"" alt="""" />
+                    </div>
+                    <div class=""block-title"">Household Products</div>
+                </div>
+            </div>
+            <div class=""swiper-slide"">
+                <div class=""cat-item"">
+                    <div class=""block-icon"">
+                        <img class=""desctop"" src=""{{media url=wysiwyg/home/new/category-icon-4.png}}"" alt="""" />
+                    </div>
+                    <div class=""block-title"">Plants and Garden</div>
+                </div>
+            </div>
+            <div class=""swiper-slide"">
+                <div class=""cat-item"">
+                    <div class=""block-icon"">
+                        <img class=""desctop"" src=""{{media url=wysiwyg/home/new/category-icon-4.png}}"" alt="""" />
+                    </div>
+                    <div class=""block-title"">Childen's Goods</div>
+                </div>
+            </div>
+        </div>
+        <div class=""swiper-scrollbar""></div>
+    </div>
+</div>
+
+{{block class=""Magento\Framework\View\Element\Template"" template=""Magento_Theme::home-page-block-category.phtml""}}
+",1
+Magefan Subscribe Block,subscribe_block,"<style>
+    .block-subscribe {margin: 30px auto;box-sizing: border-box;max-width: 1280px;padding-left: 20px;padding-right: 20px;}
+    .block-subscribe .blocks-content {background: linear-gradient(295deg, #FFD9BD 0%, #9A74EA 100%);}
+    .block-subscribe .blocks-content {padding: 40px 50px;}
+    .block-subscribe .blocks-content .blocks-content-wrapper {display: flex;align-items: center;justify-content: space-between;min-height: 174px;max-width: 1080px;margin: 0 auto;}
+    .block-subscribe .block-title {max-width: 60%;}
+    .block-subscribe .blocks-content .actions .action.subscribe {padding: 17px 30px;font-size: 18px;width: 216px;text-align: center;}
+    @media (max-width: 639px) {
+        .block-subscribe .blocks-content {padding: 35px 20px 0;}
+        .block-subscribe .blocks-content .block-title {max-width: 100%;text-align: center;}
+        .block-subscribe .blocks-content .actions {width: 100%;text-align: center;margin: 40px 0;}
+        .block-subscribe .blocks-content .blocks-content-wrapper {flex-direction: column;}
+    }
+</style>
+
+<div class=""block-subscribe"">
+    <div class=""blocks-content"">
+        <div class=""blocks-content-wrapper"">
+            <div class=""block-title"">
+                <h3 style=""color: #1e1e1e;font-size: 36px;font-family: Open Sans;font-weight: 700;"">Don't miss a sale!</h3>
+                <p style=""color: #1e1e1e;font-size: 21px;font-family: Open Sans;"">Subscribe to learn about the best deals before they go live and receive personalized discounts</p>
+            </div>
+            <div class=""actions"">
+                <a class=""action primary subscribe"" rel=""nofollow"" href=""{{store url='subscription'}}"" title=""subscribe"">Subscribe Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+",1
+Magefan Social Links (for light theme),magefan_social_link_v1,"<!-- For Light Footer -->
+<div class=""social-link v1"">
+    <a href=""#"" class=""share-facebook""></a>
+    <a href=""#"" class=""share-instagram""></a>
+    <a href=""#"" class=""share-twitter""></a>
+    <a href=""#"" class=""share-linkedin""></a>
+    <a href=""#"" class=""share-youtube""></a>
+</div>",0
+Magefan Social Links (for dark footer),magefan_social_link_v2,"<!-- For Dark Footer -->
+<div class=""social-link v2"">
+    <a href=""#"" class=""share-facebook""></a>
+    <a href=""#"" class=""share-instagram""></a>
+    <a href=""#"" class=""share-twitter""></a>
+    <a href=""#"" class=""share-linkedin""></a>
+    <a href=""#"" class=""share-youtube""></a>
+</div>",0
+Magefan Social Links (for all footer),magefan_social_link_v3,"<!-- For All Footer -->
+<div class=""social-link v3"">
+    <a href=""#"" class=""share-facebook"">
+        <svg xmlns=""http://www.w3.org/2000/svg"" viewBox=""0 0 448 512"">
+            <path d=""M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"" fill=""var(--fillColor)"" />
+        </svg>
+    </a>
+    <a href=""#"" class=""share-instagram"">
+        <svg xmlns=""http://www.w3.org/2000/svg"" viewBox=""0 0 448 512"">
+            <path d=""M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"" fill=""var(--fillColor)"" />
+        </svg>
+    </a>
+    <a href=""#"" class=""share-twitter"">
+        <svg xmlns=""http://www.w3.org/2000/svg"" viewBox=""0 0 448 512"">
+            <path d=""M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"" fill=""var(--fillColor)"" />
+        </svg>
+    </a>
+    <a href=""#"" class=""share-linkedin"">
+        <svg xmlns=""http://www.w3.org/2000/svg"" viewBox=""0 0 448 512"">
+            <path d=""M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"" fill=""var(--fillColor)"" />
+        </svg>
+    </a>
+    <a href=""#"" class=""share-youtube"">
+        <svg xmlns=""http://www.w3.org/2000/svg"" viewBox=""0 0 448 512"">
+            <path d=""M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"" fill=""var(--fillColor)"" />
+        </svg>
+    </a>
+</div>",1

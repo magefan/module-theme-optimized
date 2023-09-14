@@ -17,7 +17,7 @@
                 <basic>
                     <page_background_color>ffffff</page_background_color>
                     <text_color>333333</text_color>
-                    <border_color_base>c2c2c2</border_color_base>
+                    <border_color_base>f1f1f1</border_color_base>
                     <sidebar_background_color>f5f5f5</sidebar_background_color>
                 </basic>
                 <primary_button>
@@ -45,14 +45,14 @@
                     <icon_color_hover>1a1a1a</icon_color_hover>
                 </icon>
                 <icon_header>
-                    <icon_color>8f8f8f</icon_color>
-                    <icon_color_hover>333333</icon_color_hover>
+                    <icon_header_color>8f8f8f</icon_header_color>
+                    <icon_header_color_hover>333333</icon_header_color_hover>
                 </icon_header>
                 <input>
                     <input_background_color>ffffff</input_background_color>
                     <input_placeholder_color>c2c2c2</input_placeholder_color>
                     <input_color>333333</input_color>
-                    <input_border_color>c2c2c2</input_border_color>
+                    <input_border_color>f1f1f1</input_border_color>
                 </input>
                 <header>
                     <header_panel_wrapper_bg_color>f5f5f5</header_panel_wrapper_bg_color>
@@ -70,13 +70,19 @@
                 </navigation>
                 <product_items>
                     <product_items_bg_color>ffffff</product_items_bg_color>
-                    <product_items_color>cdcdcd</product_items_color>
-                    <product_items_border_color>ffffff</product_items_border_color>
+                    <product_items_color>333333</product_items_color>
+                    <product_items_border_color>f3f3f3</product_items_border_color>
                     <product_items_border_color_hover>c2c2c2</product_items_border_color_hover>
-<!--                    <product_items_border_radius>0</product_items_border_radius>-->
-<!--                    <product_items_box_shadow_color></product_items_box_shadow_color>-->
-<!--                    <product_items_box_shadow_color_hover></product_items_box_shadow_color_hover>-->
                 </product_items>
+                <swatch>
+                    <attr_swatch_option_color>868686</attr_swatch_option_color>
+                    <swatch_option_text_color>646464</swatch_option_text_color>
+                    <swatch_option_hover_color>333333</swatch_option_hover_color>
+                </swatch>
+                <price>
+                    <price_color>333333</price_color>
+                    <old_price_color>868686</old_price_color>
+                </price>
                 <subscribe>
                     <subscribe_bg_color>e6e6e6</subscribe_bg_color>
                     <subscribe_color>575757</subscribe_color>
@@ -89,6 +95,9 @@
                     <copyright_color>cdcdcd</copyright_color>
                 </copyright>
             </color_scheme>
+            <gallery>
+                <thumbs_direction>horizontal</thumbs_direction>
+            </gallery>
         </mfthemefo>
     </default>
 </config>

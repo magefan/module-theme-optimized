@@ -107,6 +107,13 @@ class UpgradeData implements UpgradeDataInterface
             $this->executor->exec($this->updater);
         }
 
+        if (version_compare($context->getVersion(), '2.0.0', '<')) {
+            $this->updater->setCmsBlocksData('Magefan_ThemeOptimized::fixtures/blocks/blocks_2.0.0.csv');
+            $this->updater->setCmsPagesData('Magefan_ThemeOptimized::fixtures/pages/pages_2.0.0.csv');
+            $this->executor->exec($this->updater);
+        }
+
+
         $setup->endSetup();
     }
 }
