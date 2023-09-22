@@ -11,7 +11,6 @@ Magefan Home Page,1column,,,home-page,Home Page,"<style>
     .home-block-1 .block-label .title {font-family: ""Open Sans Semibold"", sans-serif;font-size: 50px;line-height: 50px;color: #ffffff;}
     .home-block-1 .block-label .more {display: inline-block;width: 53px;height: 29px;
         background: url(""{{media url=wysiwyg/home/new/arrow-right.png}}"") no-repeat 0 0;
-        /*background: url(""../images/arrow-right.png"") no-repeat 0 0;*/
         background-size: cover;margin-left: 10px;}
     .home-block-1 a.link {display: block;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 2;text-decoration: none}
     .home-block-1 .block-right {width: calc(60% - 20px);margin-left: 20px;float: left;}
@@ -35,7 +34,6 @@ Magefan Home Page,1column,,,home-page,Home Page,"<style>
     .home-block-4 .blocks-content .blocks-content-wrapper {display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;}
     .home-block-4 .blocks-content .sale {width: 35%;
         background: url(""{{media url=wysiwyg/home/new/sale-tr.png}}"") no-repeat center center;
-        /*background: url(""../images/sale-tr.png"") no-repeat center center;*/
         min-height: 254px;background-size: cover;}
     .home-block-4 .blocks-content .sale {}
     .home-block-4 .blocks-content .block-title {width: 30%;}
