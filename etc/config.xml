@@ -83,6 +83,16 @@
                     <price_color>333333</price_color>
                     <old_price_color>868686</old_price_color>
                 </price>
+                <layered_navigation>
+                    <filter_title_bg_color_active>e6e6e6</filter_title_bg_color_active>
+                    <filter_title_color>333333</filter_title_color>
+                    <filter_title_color_active>333333</filter_title_color_active>
+                    <filter_content_bg_color>f5f5f5</filter_content_bg_color>
+                    <filter_content_item_color>333333</filter_content_item_color>
+                    <filter_content_item_color_hover>ba933e</filter_content_item_color_hover>
+                    <filter_content_item_bg_color>f5f5f5</filter_content_item_bg_color>
+                    <filter_content_item_bg_hover>f5f5f5</filter_content_item_bg_hover>
+                </layered_navigation>
                 <subscribe>
                     <subscribe_bg_color>e6e6e6</subscribe_bg_color>
                     <subscribe_color>575757</subscribe_color>

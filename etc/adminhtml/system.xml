@@ -360,8 +360,8 @@
 <!--                    </field>-->
                 </group>
 
-                <group id="layer_navigation" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Layer Navigation</label>
+                <group id="layered_navigation" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Layered Navigation</label>
                     <field id="filter_title_bg_color_active" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Filter Title Background Color (Active)</label>
                         <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
