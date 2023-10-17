@@ -113,6 +113,17 @@
 @tab-control__hover__color: @navigation-desktop-level0-item__hover__color;
 @tab-control__active__color: @navigation-desktop-level0-item__hover__color;
 
+
+// Layered Navigation
+@filter-title-bg-color-active: {{color (layer_navigation/filter_title_bg_color_active)}};
+@filter-title-color: {{color (layer_navigation/filter_title_color)}};
+@filter-title-color-active: {{color (layer_navigation/filter_title_color_active)}};
+@filter-content-bg-color: {{color (layer_navigation/filter_content_bg_color)}};
+@filter-content-item-color: {{color (layer_navigation/filter_content_item_color)}};
+@filter-content-item-color-hover: {{color (layer_navigation/filter_content_item_color_hover)}};
+@filter-content-item-bg-color: {{color (layer_navigation/filter_content_item_bg_color)}};
+@filter-content-item-bg-hover: {{color (layer_navigation/filter_content_item_bg_hover)}};
+
 // Subscribe
 @subscribe-bg-color: {{color (subscribe/subscribe_bg_color)}};
 @subscribe-color: {{color (subscribe/subscribe_color)}};
