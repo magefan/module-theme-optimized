@@ -2,7 +2,7 @@
     "name": "magefan/module-theme-optimized",
     "description": "Module is a part of optimized theme.",
     "type": "magento2-module",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "autoload": {
         "files": [
             "registration.php"
