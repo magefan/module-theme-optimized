@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+
+/** @var $block \Magefan\ThemeOptimized\Block\Head\Fonts */
+?>
+<?php
+    $fontUrl = $block->getGoogleFontUrl();
+?>
+
+<link rel="stylesheet"  magefan font type="text/css" href="<?php /* @escapeNotVerified */ echo $fontUrl; ?>">
+

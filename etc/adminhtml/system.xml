@@ -20,7 +20,23 @@
                 </field>
             </group>
 
-            <group id="color_scheme" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="google_font" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Google Fonts</label>
+                <field id="google_font_family" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Google Font Family</label>
+                    <source_model>Magefan\ThemeOptimized\Model\Config\Source\GoogleFonts</source_model>
+                </field>
+                <field id="google_font_weight" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Font Weight</label>
+                    <source_model>Magefan\ThemeOptimized\Model\Config\Source\GoogleFontWeights</source_model>
+                </field>
+                <field id="google_font_character" translate="label" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Font Character</label>
+                    <source_model>Magefan\ThemeOptimized\Model\Config\Source\GoogleFontCharacter</source_model>
+                </field>
+            </group>
+
+            <group id="color_scheme" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Color Schema</label>
                 <field id="theme" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Apply Preset</label>
@@ -461,6 +477,7 @@
                     <source_model>Magefan\ThemeOptimized\Model\Config\Source\GalleryThumbsDirection</source_model>
                 </field>
             </group>
+
         </section>
     </system>
 </config>

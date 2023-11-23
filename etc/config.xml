@@ -8,6 +8,10 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <mfthemefo>
+            <google_font>
+                <google_font__family>Open Sans</google_font__family>
+                <google_font__weight>400</google_font__weight>
+            </google_font>
             <color_scheme>
                 <theme_color>
                     <primary>1a1a1a</primary>
