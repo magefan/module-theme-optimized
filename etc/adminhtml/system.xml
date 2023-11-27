@@ -267,7 +267,6 @@
                     <comment>Set input height.</comment>
                 </field>
 
-
                 <depends>
                     <field id="mfthemefo/color_scheme/theme">custom</field>
                 </depends>
