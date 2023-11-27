@@ -3,109 +3,115 @@
 //  ____________________________________________
 
 // Theme Colors
-@theme__color__primary: {{color (theme_color/primary)}};
-@theme__color__primary-alt: {{color (theme_color/primary_alt)}};
-@theme__color__secondary: {{color (theme_color/secondary)}};
+@theme__color__primary: {{color (mfthemefo/theme_color/primary)}};
+@theme__color__primary-alt: {{color (mfthemefo/theme_color/primary_alt)}};
+@theme__color__secondary: {{color (mfthemefo/theme_color/secondary)}};
 
 // Color nesting
 // Basic colors
-@page__background-color: {{color (basic/page_background_color)}};
-@primary__color: {{color (basic/text_color)}};
-@text__color: {{color (basic/text_color)}};
-@border-color__base: {{color (basic/border_color_base)}};
-@sidebar__background-color: {{color (basic/sidebar_background_color)}};
+@page__background-color: {{color (mfthemefo/basic/page_background_color)}};
+@primary__color: {{color (mfthemefo/basic/text_color)}};
+@text__color: {{color (mfthemefo/basic/text_color)}};
+@border-color__base: {{color (mfthemefo/basic/border_color_base)}};
+@sidebar__background-color: {{color (mfthemefo/basic/sidebar_background_color)}};
 
 // Primary buttons
-@button-primary__background: {{color (primary_button/primary_button_bg_color)}};
-@button-primary__hover__background: {{color (primary_button/primary_button_bg_color_hover)}};
-@button-primary__color: {{color (primary_button/primary_button_color)}};
-@button-primary__hover__color: {{color (primary_button/primary_button_color_hover)}};
-@button-primary__border: 1px solid {{color (primary_button/primary_button_border_color)}};
-@button-primary__hover__border: 1px solid {{color (primary_button/primary_button_border_color_hover)}};
+@button-primary__background: {{color (mfthemefo/primary_button/primary_button_bg_color)}};
+@button-primary__hover__background: {{color (mfthemefo/primary_button/primary_button_bg_color_hover)}};
+@button-primary__color: {{color (mfthemefo/primary_button/primary_button_color)}};
+@button-primary__hover__color: {{color (mfthemefo/primary_button/primary_button_color_hover)}};
+@button-primary__border: 1px solid {{color (mfthemefo/primary_button/primary_button_border_color)}};
+@button-primary__hover__border: 1px solid {{color (mfthemefo/primary_button/primary_button_border_color_hover)}};
 
 // Buttons
-@button__background: {{color (secondary_button/button_bg_color)}};
-@button__hover__background: {{color (secondary_button/button_bg_color_hover)}};
-@button__color: {{color (secondary_button/button_color)}};
-@button__hover__color: {{color (secondary_button/button_color_hover)}};
-@button__border: 1px solid {{color (secondary_button/button_border_color)}};
-@button__hover__border: 1px solid {{color (secondary_button/button_border_color_hover)}};
+@button__background: {{color (mfthemefo/secondary_button/button_bg_color)}};
+@button__hover__background: {{color (mfthemefo/secondary_button/button_bg_color_hover)}};
+@button__color: {{color (mfthemefo/secondary_button/button_color)}};
+@button__hover__color: {{color (mfthemefo/secondary_button/button_color_hover)}};
+@button__border: 1px solid {{color (mfthemefo/secondary_button/button_border_color)}};
+@button__hover__border: 1px solid {{color (mfthemefo/secondary_button/button_border_color_hover)}};
 
 // Link
-@link__color: {{color (link/link_color)}};
-@link__hover__color: {{color (link/link_color_hover)}};
+@link__color: {{color (mfthemefo/link/link_color)}};
+@link__hover__color: {{color (mfthemefo/link/link_color_hover)}};
+@link__text-decoration: {{text (mfthemefo/link/link_text_decoration)}};
+@link__hover__text-decoration: {{text (mfthemefo/link/link_text_decoration_hover)}};
+@link__active__text-decoration: {{text (mfthemefo/link/link_text_decoration_hover)}};
+@link__visited__text-decoration: {{text (mfthemefo/link/link_text_decoration_hover)}};
 
 // Icons
-@icon_color: {{color (icon/icon_color)}};
-@icon_color_hover: {{color (icon/icon_color_hover)}};
+@icon_color: {{color (mfthemefo/icon/icon_color)}};
+@icon_color_hover: {{color (mfthemefo/icon/icon_color_hover)}};
 
 // All Icons
-@icon-font__color: {{color (icon/icon_color)}};
-@icon-font__color-hover: {{color (icon/icon_color_hover)}};
+@icon-font__color: {{color (mfthemefo/icon/icon_color)}};
+@icon-font__color-hover: {{color (mfthemefo/icon/icon_color_hover)}};
 @_icon-font-color-active: @icon-font__color-hover;
 
 // Form
 // @form-element-input__background: @color-gray89;
-@form-element-input__background: {{color (input/input_background_color)}};
+@form-element-input__background: {{color (mfthemefo/input/input_background_color)}};
 @form-element-input__border-color: @border-color__base;
-@form-element-input__border-color: {{color (input/input_border_color)}};
+@form-element-input__border-color: {{color (mfthemefo/input/input_border_color)}};
 // @form-element-input__border: 1px solid @form-element-input__border-color;
-@form-element-input__color: {{color (input/input_color)}};
+@form-element-input__color: {{color (mfthemefo/input/input_color)}};
+@form-element-input__border-radius: {{numeric_value (mfthemefo/input/input_border_radius)}};
+@form-element-input__height: {{numeric_value (mfthemefo/input/input_height)}};
 // Placeholder
-@form-element-input-placeholder__color: {{color (input/input_placeholder_color)}};
+@form-element-input-placeholder__color: {{color (mfthemefo/input/input_placeholder_color)}};
 // Autofill
-@form-element_autofill__background: {{color (input/input_background_color)}};
-@form-element_autofill__color: {{color (input/input_color)}};
+@form-element_autofill__background: {{color (mfthemefo/input/input_background_color)}};
+@form-element_autofill__color: {{color (mfthemefo/input/input_color)}};
 
 // Header
-@header__background-color: {{color (header/header_bg_color)}};
+@header__background-color: {{color (mfthemefo/header/header_bg_color)}};
 
 // Header Top Panel
-@header_panel_wrapper: {{color (header/header_panel_wrapper_bg_color)}};
-@header_panel_wrapper_color: {{color (header/header_panel_wrapper_color)}};
+@header_panel_wrapper: {{color (mfthemefo/header/header_panel_wrapper_bg_color)}};
+@header_panel_wrapper_color: {{color (mfthemefo/header/header_panel_wrapper_color)}};
 
 // Header icons
-@header-icons-color: {{color (icon_header/icon_header_color)}};
-@header-icons-color-hover: {{color (icon_header/icon_header_color_hover)}};
+@header-icons-color: {{color (mfthemefo/icon_header/icon_header_color)}};
+@header-icons-color-hover: {{color (mfthemefo/icon_header/icon_header_color_hover)}};
 
 // Navigation Mobile
-@navigation-level0-item__color: {{color (navigation/nav_item_color)}};
-@navigation-level0-item__hover__color: {{color (navigation/nav_item_color_hover)}};
+@navigation-level0-item__color: {{color (mfthemefo/navigation/nav_item_color)}};
+@navigation-level0-item__hover__color: {{color (mfthemefo/navigation/nav_item_color_hover)}};
 // Submenu Mobile
-@submenu-item__color: {{color (navigation/nav_item_color)}};
+@submenu-item__color: {{color (mfthemefo/navigation/nav_item_color)}};
 
 // Navigation Desktop
-@navigation__background: {{color (navigation/nav_bg_color)}};
-@navigation-desktop-level0-item__color: {{color (navigation/nav_item_color)}};
-@navigation-desktop-level0-item__hover__color: {{color (navigation/nav_item_color_hover)}};
-@navigation-desktop-level0-item__active__color: {{color (navigation/nav_item_color_hover)}};
+@navigation__background: {{color (mfthemefo/navigation/nav_bg_color)}};
+@navigation-desktop-level0-item__color: {{color (mfthemefo/navigation/nav_item_color)}};
+@navigation-desktop-level0-item__hover__color: {{color (mfthemefo/navigation/nav_item_color_hover)}};
+@navigation-desktop-level0-item__active__color: {{color (mfthemefo/navigation/nav_item_color_hover)}};
 
 // Submenu Desktop
-@submenu-desktop-item__color: {{color (navigation/sub_menu_item_color)}};
-@submenu-desktop-item__hover__color: {{color (navigation/sub_menu_item_color_hover)}};
-@submenu-desktop-item__background: {{color (navigation/sub_menu_item_bg_color)}};
-@submenu-desktop-item__hover__background: {{color (navigation/sub_menu_item_bg_color_hover)}};
+@submenu-desktop-item__color: {{color (mfthemefo/navigation/sub_menu_item_color)}};
+@submenu-desktop-item__hover__color: {{color (mfthemefo/navigation/sub_menu_item_color_hover)}};
+@submenu-desktop-item__background: {{color (mfthemefo/navigation/sub_menu_item_bg_color)}};
+@submenu-desktop-item__hover__background: {{color (mfthemefo/navigation/sub_menu_item_bg_color_hover)}};
 
 // Breadcrumbs
-@_breadcrumbs-link-color: {{color (basic/text_color)}};
-@_breadcrumbs-link-color-visited: {{color (basic/text_color)}};
-@_breadcrumbs-current-color: {{color (basic/text_color)}};
+@_breadcrumbs-link-color: {{color (mfthemefo/basic/text_color)}};
+@_breadcrumbs-link-color-visited: {{color (mfthemefo/basic/text_color)}};
+@_breadcrumbs-current-color: {{color (mfthemefo/basic/text_color)}};
 
 // Product Items
-@product_items_bg_color: {{color (product_items/product_items_bg_color)}};
-@product_items_color: {{color (product_items/product_items_color)}};
-@product_items_border_color: {{color (product_items/product_items_border_color)}};
-@product_items_border_color_hover: {{color (product_items/product_items_border_color_hover)}};
-@product_items_border_radius: {{color (product_items/product_items_border_radius)}};
+@product_items_bg_color: {{color (mfthemefo/product_items/product_items_bg_color)}};
+@product_items_color: {{color (mfthemefo/product_items/product_items_color)}};
+@product_items_border_color: {{color (mfthemefo/product_items/product_items_border_color)}};
+@product_items_border_color_hover: {{color (mfthemefo/product_items/product_items_border_color_hover)}};
+@product_items_border_radius: {{color (mfthemefo/product_items/product_items_border_radius)}};
 
 // Swatch
-@attr-swatch-option__color: {{color (swatch/attr_swatch_option_color)}};
-@swatch-option-text__color: {{color (swatch/swatch_option_text_color)}};
-@swatch-option__hover__color: {{color (swatch/swatch_option_hover_color)}};
+@attr-swatch-option__color: {{color (mfthemefo/swatch/attr_swatch_option_color)}};
+@swatch-option-text__color: {{color (mfthemefo/swatch/swatch_option_text_color)}};
+@swatch-option__hover__color: {{color (mfthemefo/swatch/swatch_option_hover_color)}};
 
 // Price
-@price_color: {{color (price/price_color)}};
-@old_price_color: {{color (price/old_price_color)}};
+@price_color: {{color (mfthemefo/price/price_color)}};
+@old_price_color: {{color (mfthemefo/price/old_price_color)}};
 
 // Tabs
 @tab-control__background-color: @page__background-color;
@@ -115,22 +121,22 @@
 
 
 // Layered Navigation
-@filter-title-bg-color-active: {{color (layered_navigation/filter_title_bg_color_active)}};
-@filter-title-color: {{color (layered_navigation/filter_title_color)}};
-@filter-title-color-active: {{color (layered_navigation/filter_title_color_active)}};
-@filter-content-bg-color: {{color (layered_navigation/filter_content_bg_color)}};
-@filter-content-item-color: {{color (layered_navigation/filter_content_item_color)}};
-@filter-content-item-color-hover: {{color (layered_navigation/filter_content_item_color_hover)}};
-@filter-content-item-bg-color: {{color (layered_navigation/filter_content_item_bg_color)}};
-@filter-content-item-bg-hover: {{color (layered_navigation/filter_content_item_bg_hover)}};
+@filter-title-bg-color-active: {{color (mfthemefo/layered_navigation/filter_title_bg_color_active)}};
+@filter-title-color: {{color (mfthemefo/layered_navigation/filter_title_color)}};
+@filter-title-color-active: {{color (mfthemefo/layered_navigation/filter_title_color_active)}};
+@filter-content-bg-color: {{color (mfthemefo/layered_navigation/filter_content_bg_color)}};
+@filter-content-item-color: {{color (mfthemefo/layered_navigation/filter_content_item_color)}};
+@filter-content-item-color-hover: {{color (mfthemefo/layered_navigation/filter_content_item_color_hover)}};
+@filter-content-item-bg-color: {{color (mfthemefo/layered_navigation/filter_content_item_bg_color)}};
+@filter-content-item-bg-hover: {{color (mfthemefo/layered_navigation/filter_content_item_bg_hover)}};
 
 // Subscribe
-@subscribe-bg-color: {{color (subscribe/subscribe_bg_color)}};
-@subscribe-color: {{color (subscribe/subscribe_color)}};
+@subscribe-bg-color: {{color (mfthemefo/subscribe/subscribe_bg_color)}};
+@subscribe-color: {{color (mfthemefo/subscribe/subscribe_color)}};
 
 // Footer
-@footer__background-color: {{color (footer/footer_bg_color)}};
+@footer__background-color: {{color (mfthemefo/footer/footer_bg_color)}};
 
 // Copyright
-@copyright_bg_color: {{color (copyright/copyright_bg_color)}};
-@copyright_color: {{color (copyright/copyright_color)}};
+@copyright_bg_color: {{color (mfthemefo/copyright/copyright_bg_color)}};
+@copyright_color: {{color (mfthemefo/copyright/copyright_color)}};

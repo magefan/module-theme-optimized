@@ -55,7 +55,7 @@ class Temporary
      * @var array|mixed
      */
     private $transferConfigProcessors;
-    
+
     /**
      * @var
      */

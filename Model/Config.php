@@ -17,6 +17,12 @@ class Config
 
     const XML_PATH_TO_GALLERY_THUMBS_DIRECTION = 'mfthemefo/gallery/thumbs_direction';
 
+    const XML_PATH_TO_GOOGLE_FONT_FAMILY = 'mfthemefo/google_font/google_font_family';
+
+    const XML_PATH_TO_GOOGLE_FONT_WEIGHT = 'mfthemefo/google_font/google_font_weight';
+
+    const XML_PATH_TO_GOOGLE_FONT_CHARACTER = 'mfthemefo/google_font/google_font_character';
+
     /**
      * @var ScopeConfigInterface
      */
@@ -48,6 +54,33 @@ class Config
     public function getGalleryThumbsDirection($storeId = null): string
     {
         return (string)$this->getConfig(self::XML_PATH_TO_GALLERY_THUMBS_DIRECTION, $storeId);
+    }
+
+    /**
+     * @param null $storeId
+     * @return string
+     */
+    public function getGoogleFont($storeId = null): string
+    {
+        return (string)$this->getConfig(self::XML_PATH_TO_GOOGLE_FONT_FAMILY, $storeId);
+    }
+
+    /**
+     * @param null $storeId
+     * @return string
+     */
+    public function getGoogleFontWeight($storeId = null): string
+    {
+        return (string)$this->getConfig(self::XML_PATH_TO_GOOGLE_FONT_WEIGHT, $storeId);
+    }
+
+    /**
+     * @param null $storeId
+     * @return array
+     */
+    public function getGoogleFontCharacter($storeId = null): array
+    {
+        return explode(',', (string)$this->getConfig(self::XML_PATH_TO_GOOGLE_FONT_CHARACTER, $storeId));
     }
 
     /**
