@@ -261,11 +261,11 @@
                     <validate>validate-digits</validate>
                     <comment>Set border radius input.</comment>
                 </field>
-                <field id="input_height" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Input Height</label>
-                    <validate>validate-digits</validate>
-                    <comment>Set input height.</comment>
-                </field>
+<!--                <field id="input_height" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">-->
+<!--                    <label>Input Height</label>-->
+<!--                    <validate>validate-digits</validate>-->
+<!--                    <comment>Set input height.</comment>-->
+<!--                </field>-->
 
                 <depends>
                     <field id="mfthemefo/color_scheme/theme">custom</field>

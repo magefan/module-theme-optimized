@@ -56,7 +56,7 @@
 // @form-element-input__border: 1px solid @form-element-input__border-color;
 @form-element-input__color: {{color (mfthemefo/input/input_color)}};
 @form-element-input__border-radius: {{numeric_value (mfthemefo/input/input_border_radius)}};
-@form-element-input__height: {{numeric_value (mfthemefo/input/input_height)}};
+//@form-element-input__height: {{numeric_value (mfthemefo/input/input_height)}};
 // Placeholder
 @form-element-input-placeholder__color: {{color (mfthemefo/input/input_placeholder_color)}};
 // Autofill

@@ -61,7 +61,7 @@
                 <input_color>333333</input_color>
                 <input_border_color>f1f1f1</input_border_color>
                 <input_border_radius>1</input_border_radius>
-                <input_height>32</input_height>
+            <!--<input_height>32</input_height>-->
             </input>
             <header>
                 <header_panel_wrapper_bg_color>f5f5f5</header_panel_wrapper_bg_color>
