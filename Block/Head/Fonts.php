@@ -44,17 +44,6 @@ class Fonts extends Template
      */
     public function getGoogleFontUrl(): string
     {
-        return $this->googlefontUrl . $this->config->getGoogleFont() . ':' . $this->config->getGoogleFontWeight() . $this->getFontCharacters();
-    }
-
-
-    /**
-     * @return string
-     */
-    protected function getFontCharacters(): string
-    {
-        return implode(',', $this->config->getGoogleFontCharacter())
-            ? '&subset=' . implode(',', $this->config->getGoogleFontCharacter())
-            : '';
+        return $this->googlefontUrl . $this->config->getGoogleFont();
     }
 }

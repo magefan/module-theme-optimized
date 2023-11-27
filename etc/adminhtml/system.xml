@@ -25,14 +25,7 @@
                 <field id="google_font_family" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Google Font Family</label>
                     <source_model>Magefan\ThemeOptimized\Model\Config\Source\GoogleFonts</source_model>
-                </field>
-                <field id="google_font_weight" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Font Weight</label>
-                    <source_model>Magefan\ThemeOptimized\Model\Config\Source\GoogleFontWeights</source_model>
-                </field>
-                <field id="google_font_character" translate="label" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Font Character</label>
-                    <source_model>Magefan\ThemeOptimized\Model\Config\Source\GoogleFontCharacter</source_model>
+                    <comment>Set font family for default paragraphs.</comment>
                 </field>
             </group>
 
@@ -45,432 +38,468 @@
                     </comment>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPreset</frontend_model>
                 </field>
-
-                <group id="theme_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Theme Colors</label>
-                    <field id="primary" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Theme Color Primary</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="primary_alt" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Theme Color Primary Alt</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="secondary" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Theme Color Secondary</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="basic" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Basic Color</label>
-                    <field id="page_background_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="text_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Text Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="border_color_base" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Border Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="sidebar_background_color" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Sidebar Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="primary_button" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Primary Buttons</label>
-                    <field id="primary_button_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="primary_button_bg_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Background Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="primary_button_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Text Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="primary_button_color_hover" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Text Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="primary_button_border_color" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Border Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="primary_button_border_color_hover" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Border Color (On Hover))</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="secondary_button" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Secondary Buttons</label>
-                    <field id="button_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="button_bg_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Background Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="button_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Text Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="button_color_hover" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Text Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="button_border_color" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Border Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="button_border_color_hover" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Button Border Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="link" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Link</label>
-                    <field id="link_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Link Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="link_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Link Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="icon" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Icon</label>
-                    <field id="icon_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Icon Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="icon_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Icon Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="icon_header" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Icon Header</label>
-                    <field id="icon_header_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Icon Header Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="icon_header_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Icon Header Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="input" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Input</label>
-                    <field id="input_background_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Input Background Color </label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="input_placeholder_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Input Placeholder Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="input_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Input Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="input_border_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Input Border Color </label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="header" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Header</label>
-                    <field id="header_panel_wrapper_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Header Top Panel Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="header_panel_wrapper_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Header Top Panel Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="header_bg_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Header Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="navigation" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Navigation</label>
-                    <field id="nav_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Navigation Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="nav_item_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Navigation Item Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="nav_item_color_hover" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Navigation Item Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="sub_menu_item_bg_color" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Sub Menu Item Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="sub_menu_item_bg_color_hover" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Sub Menu Item Background Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="sub_menu_item_color" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Sub Menu Item Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="sub_menu_item_color_hover" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Sub Menu Item Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="product_items" translate="label" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Product Items</label>
-                    <field id="product_items_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Product Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="product_items_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Product Name Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="product_items_border_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Product Border Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="product_items_border_color_hover" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Product Border Color Hover</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="swatch" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Swatch</label>
-                    <field id="attr_swatch_option_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Swatch Attribute Text Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="swatch_option_text_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Swatch Options Text Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="swatch_option_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Swatch Option Text Hover Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                </group>
-
-                <group id="price" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Price</label>
-                    <field id="price_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Normal Price Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="old_price_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Old Price Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-<!--                    <field id="special_price_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">-->
-<!--                        <label>Special Price Color</label>-->
-<!--                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>-->
-<!--                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>-->
-<!--                    </field>-->
-                </group>
-
-                <group id="layered_navigation" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Layered Navigation</label>
-                    <field id="filter_title_bg_color_active" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Filter Title Background Color (Active)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="filter_title_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Filter Title Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="filter_title_color_active" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Filter Title Color (Active)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="filter_content_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Filter Content Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="filter_content_item_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Filter Content Item Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="filter_content_item_color_hover" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Filter Content Item Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="filter_content_item_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Filter Content Item Background Color </label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="filter_content_item_bg_hover" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Filter Content Item Background Color (On Hover)</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="subscribe" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Subscribe</label>
-                    <field id="subscribe_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Subscribe Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="subscribe_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Subscribe Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="footer" translate="label" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Footer</label>
-                    <field id="footer_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Footer Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
-
-                <group id="copyright" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Copyright</label>
-                    <field id="copyright_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Copyright Background Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <field id="copyright_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Copyright Color</label>
-                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    </field>
-                    <depends>
-                        <field id="mfthemefo/color_scheme/theme">custom</field>
-                    </depends>
-                </group>
             </group>
 
-            <group id="gallery" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="theme_color" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Theme Colors</label>
+                <field id="primary" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Theme Color Primary</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="primary_alt" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Theme Color Primary Alt</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="secondary" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Theme Color Secondary</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="basic" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Basic Color</label>
+                <field id="page_background_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="text_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="border_color_base" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Border Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="sidebar_background_color" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sidebar Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="primary_button" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Primary Buttons</label>
+                <field id="primary_button_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="primary_button_bg_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Background Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="primary_button_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Text Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="primary_button_color_hover" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Text Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="primary_button_border_color" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Border Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="primary_button_border_color_hover" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Border Color (On Hover))</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="secondary_button" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Secondary Buttons</label>
+                <field id="button_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="button_bg_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Background Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="button_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Text Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="button_color_hover" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Text Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="button_border_color" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Border Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="button_border_color_hover" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Border Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="link" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Links</label>
+                <field id="link_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Links Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set color for links.</comment>
+                </field>
+                <field id="link_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Links Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set color for links on hover.</comment>
+                </field>
+
+                <field id="link_text_decoration" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Font Decoration</label>
+                    <comment>Set Text Decoration for links. Example: none </comment>
+                    <source_model>Magefan\ThemeOptimized\Model\Config\Source\FontDecoration</source_model>
+                </field>
+                <field id="link_text_decoration_hover" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Font Decoration (On Hover)</label>
+                    <comment>Set Text Decoration for links on hover. Example: underline </comment>
+                    <source_model>Magefan\ThemeOptimized\Model\Config\Source\FontDecoration</source_model>
+                </field>
+
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="icon" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Icons</label>
+                <field id="icon_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Icons Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set color for icons.</comment>
+                </field>
+                <field id="icon_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Icons Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set color for icons on hover.</comment>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="icon_header" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Icon Header</label>
+                <field id="icon_header_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Icon Header Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="icon_header_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Icon Header Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="input" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Input</label>
+                <field id="input_background_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Input Background Color </label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set background color for input.</comment>
+                </field>
+                <field id="input_placeholder_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Input Placeholder Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set color for input placeholder text.</comment>
+                </field>
+                <field id="input_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Input Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set color for input text.</comment>
+                </field>
+                <field id="input_border_color" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Input Border Color </label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set color for input border.</comment>
+                </field>
+                <field id="input_border_radius" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Input Border radius</label>
+                    <validate>validate-digits</validate>
+                    <comment>Set border radius input.</comment>
+                </field>
+                <field id="input_height" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Input Height</label>
+                    <validate>validate-digits</validate>
+                    <comment>Set input height.</comment>
+                </field>
+
+
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="header" translate="label" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Header</label>
+                <field id="header_panel_wrapper_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Top Panel Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set background color for top panel.</comment>
+                </field>
+                <field id="header_panel_wrapper_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Top Panel Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set color for top panel text.</comment>
+                </field>
+                <field id="header_bg_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set background color for header.</comment>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="navigation" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Navigation</label>
+                <field id="nav_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Navigation Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="nav_item_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Navigation Item Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="nav_item_color_hover" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Navigation Item Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="sub_menu_item_bg_color" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sub Menu Item Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="sub_menu_item_bg_color_hover" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sub Menu Item Background Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="sub_menu_item_color" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sub Menu Item Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="sub_menu_item_color_hover" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sub Menu Item Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="product_items" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product Items</label>
+                <field id="product_items_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="product_items_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Name Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="product_items_border_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Border Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="product_items_border_color_hover" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Border Color Hover</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="swatch" translate="label" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Swatch</label>
+                <field id="attr_swatch_option_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Swatch Attribute Text Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="swatch_option_text_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Swatch Options Text Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="swatch_option_hover_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Swatch Option Text Hover Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+            </group>
+
+            <group id="price" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Price</label>
+                <field id="price_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Normal Price Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="old_price_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Old Price Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <!--                    <field id="special_price_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">-->
+                <!--                        <label>Special Price Color</label>-->
+                <!--                        <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>-->
+                <!--                        <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>-->
+                <!--                    </field>-->
+            </group>
+
+            <group id="layered_navigation" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Layered Navigation</label>
+                <field id="filter_title_bg_color_active" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Filter Title Background Color (Active)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="filter_title_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Filter Title Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="filter_title_color_active" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Filter Title Color (Active)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="filter_content_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Filter Content Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="filter_content_item_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Filter Content Item Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="filter_content_item_color_hover" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Filter Content Item Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="filter_content_item_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Filter Content Item Background Color </label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="filter_content_item_bg_hover" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Filter Content Item Background Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="subscribe" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Subscribe</label>
+                <field id="subscribe_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Subscribe Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="subscribe_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Subscribe Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="footer" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Footer</label>
+                <field id="footer_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="copyright" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Copyright</label>
+                <field id="copyright_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Copyright Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <field id="copyright_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Copyright Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+
+            <group id="gallery" translate="label" type="text" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Gallery</label>
                 <field id="thumbs_direction" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Gallery Thumbs Direction</label>

@@ -9,7 +9,7 @@ namespace Magefan\ThemeOptimized\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
-class GoogleFontWeights implements OptionSourceInterface
+class FontDecoration implements OptionSourceInterface
 {
     /**
      * @return array
@@ -18,26 +18,23 @@ class GoogleFontWeights implements OptionSourceInterface
     {
         return [
             [
-                'label' => '300', 'value' => '400',
+                'label' => 'none', 'value' => 'none',
             ],
             [
-                'label' => '400', 'value' => '400',
+                'label' => 'underline', 'value' => 'underline',
             ],
             [
-                'label' => '500', 'value' => '600',
+                'label' => 'overline', 'value' => 'overline',
             ],
             [
-                'label' => '600', 'value' => '600',
+                'label' => 'line-through', 'value' => 'line-through',
             ],
             [
-                'label' => '700', 'value' => '600',
+                'label' => 'initial', 'value' => 'initial',
             ],
             [
-                'label' => '800', 'value' => '600',
-            ],
-            [
-                'label' => '900', 'value' => '600',
-            ],
+                'label' => 'inherit', 'value' => 'inherit',
+            ]
         ];
     }
 }

@@ -11,9 +11,9 @@ use Magefan\ThemeOptimized\Model\Config;
 use Magento\Framework\Filter\DirectiveProcessorInterface;
 use Magento\Framework\Filter\Template;
 
-class Color implements DirectiveProcessorInterface
+class NumericValue implements DirectiveProcessorInterface
 {
-    const REGULAR_EXPRESSION_TO_GET_COLOR_VARIABLE_NAME  = '/{{color\s\(([a-z\_\/]{0,100})\)}}/si';
+    const REGULAR_EXPRESSION_TO_GET_COLOR_VARIABLE_NAME  = '/{{numeric_value\s\(([a-z\_\/]{0,100})\)}}/si';
 
     /**
      * @var Config
@@ -34,8 +34,7 @@ class Color implements DirectiveProcessorInterface
     public function process(array $construction, Template $filter, array $templateVariables): string
     {
         $value = $this->config->getConfig($construction[1]);
-
-        return $value ? '#' . $value : '#000000';
+        return ($value ?  $value : '1') . 'px';
     }
 
     /**
