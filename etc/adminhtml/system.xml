@@ -22,7 +22,7 @@
 
             <group id="google_font" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Google Fonts</label>
-                <field id="google_font_family" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="google_font_family" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Google Font Family</label>
                     <source_model>Magefan\ThemeOptimized\Model\Config\Source\GoogleFonts</source_model>
                     <comment>Set font family for default paragraphs.</comment>
@@ -68,95 +68,126 @@
                     <label>Background Color</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Appears behind scrollable content in your store.</comment>
                 </field>
                 <field id="text_color" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Text Color</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set text color across all pages (e.g. catalog, blog, shopping cart, etc).</comment>
                 </field>
                 <field id="border_color_base" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Border Color</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set default border color.</comment>
                 </field>
                 <field id="sidebar_background_color" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Sidebar Background Color</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set the background color for the sidebar (e.g. customer account sidebar, checkout sidebar).</comment>
                 </field>
                 <depends>
                     <field id="mfthemefo/color_scheme/theme">custom</field>
                 </depends>
             </group>
 
-            <group id="primary_button" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Primary Buttons</label>
-                <field id="primary_button_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Button Background Color</label>
-                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                </field>
-                <field id="primary_button_bg_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Button Background Color (On Hover)</label>
-                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                </field>
-                <field id="primary_button_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Button Text Color</label>
-                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                </field>
-                <field id="primary_button_color_hover" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Button Text Color (On Hover)</label>
-                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                </field>
-                <field id="primary_button_border_color" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Button Border Color</label>
-                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                </field>
-                <field id="primary_button_border_color_hover" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Button Border Color (On Hover))</label>
-                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
-                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                </field>
-                <depends>
-                    <field id="mfthemefo/color_scheme/theme">custom</field>
-                </depends>
-            </group>
-
-            <group id="secondary_button" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Secondary Buttons</label>
+            <group id="default_button" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Default Buttons</label>
                 <field id="button_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Button Background Color</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set background color for default buttons.</comment>
                 </field>
                 <field id="button_bg_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Button Background Color (On Hover)</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set background color for default buttons on hover.</comment>
                 </field>
                 <field id="button_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Button Text Color</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set text color for default buttons.</comment>
                 </field>
                 <field id="button_color_hover" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Button Text Color (On Hover)</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set text color for default buttons on hover.</comment>
                 </field>
                 <field id="button_border_color" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Button Border Color</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set border color for default buttons.</comment>
                 </field>
                 <field id="button_border_color_hover" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Button Border Color (On Hover)</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set border color for default buttons on hover.</comment>
+                </field>
+                <field id="button_font_size" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Font Size</label>
+                    <validate>validate-digits</validate>
+                    <comment>Set font size for default buttons.</comment>
+                </field>
+                <field id="button_font_weight" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Font Weight</label>
+                    <validate>validate-digits</validate>
+                    <comment>Set font weight for default buttons.</comment>
+                </field>
+                <field id="button_border_radius" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Border Radius</label>
+                    <validate>validate-digits</validate>
+                    <comment>Set border radius for default buttons.</comment>
+                </field>
+                <depends>
+                    <field id="mfthemefo/color_scheme/theme">custom</field>
+                </depends>
+            </group>
+
+            <group id="primary_button" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Primary Buttons</label>
+                <field id="primary_button_bg_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Background Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set background color for primary buttons.</comment>
+                </field>
+                <field id="primary_button_bg_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Background Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set background color for primary buttons on hover.</comment>
+                </field>
+                <field id="primary_button_color" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Text Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set text color for primary buttons.</comment>
+                </field>
+                <field id="primary_button_color_hover" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Text Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set text color for primary buttons on hover.</comment>
+                </field>
+                <field id="primary_button_border_color" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Border Color</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set bortder color for primary buttons.</comment>
+                </field>
+                <field id="primary_button_border_color_hover" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Border Color (On Hover)</label>
+                    <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
+                    <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
+                    <comment>Set bortder color for primary buttons on hover.</comment>
                 </field>
                 <depends>
                     <field id="mfthemefo/color_scheme/theme">custom</field>
@@ -169,26 +200,24 @@
                     <label>Links Color</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    <comment>Set color for links.</comment>
+                    <comment>Set text color for links.</comment>
                 </field>
                 <field id="link_color_hover" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Links Color (On Hover)</label>
                     <frontend_model>Magefan\ThemeOptimized\Block\Adminhtml\System\Config\Form\ColorPicker</frontend_model>
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
-                    <comment>Set color for links on hover.</comment>
+                    <comment>Set text color for links on hover.</comment>
                 </field>
-
                 <field id="link_text_decoration" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Font Decoration</label>
-                    <comment>Set Text Decoration for links. Example: none </comment>
                     <source_model>Magefan\ThemeOptimized\Model\Config\Source\FontDecoration</source_model>
+                    <comment>Set text decoration for links. Example: none </comment>
                 </field>
                 <field id="link_text_decoration_hover" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Font Decoration (On Hover)</label>
-                    <comment>Set Text Decoration for links on hover. Example: underline </comment>
                     <source_model>Magefan\ThemeOptimized\Model\Config\Source\FontDecoration</source_model>
+                    <comment>Set Text Decoration for links on hover. Example: underline </comment>
                 </field>
-
                 <depends>
                     <field id="mfthemefo/color_scheme/theme">custom</field>
                 </depends>
@@ -256,17 +285,16 @@
                     <validate>required-entry validate-length minimum-length-3 maximum-length-6 validate-alphanum-with-spaces</validate>
                     <comment>Set color for input border.</comment>
                 </field>
-                <field id="input_border_radius" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="input_border_radius" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Input Border radius</label>
                     <validate>validate-digits</validate>
-                    <comment>Set border radius input.</comment>
+                    <comment>Set border radius for input.</comment>
                 </field>
 <!--                <field id="input_height" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">-->
 <!--                    <label>Input Height</label>-->
 <!--                    <validate>validate-digits</validate>-->
 <!--                    <comment>Set input height.</comment>-->
 <!--                </field>-->
-
                 <depends>
                     <field id="mfthemefo/color_scheme/theme">custom</field>
                 </depends>

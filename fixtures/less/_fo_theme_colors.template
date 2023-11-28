@@ -15,6 +15,17 @@
 @border-color__base: {{color (mfthemefo/basic/border_color_base)}};
 @sidebar__background-color: {{color (mfthemefo/basic/sidebar_background_color)}};
 
+// Default Buttons
+@button__background: {{color (mfthemefo/default_button/button_bg_color)}};
+@button__hover__background: {{color (mfthemefo/default_button/button_bg_color_hover)}};
+@button__color: {{color (mfthemefo/default_button/button_color)}};
+@button__hover__color: {{color (mfthemefo/default_button/button_color_hover)}};
+@button__border: 1px solid {{color (mfthemefo/default_button/button_border_color)}};
+@button__hover__border: 1px solid {{color (mfthemefo/default_button/button_border_color_hover)}};
+@button__font-size: {{numeric_value (mfthemefo/default_button/button_font_size)}};
+@button__font-weight: {{numeric_value (mfthemefo/default_button/button_font_weight)}};
+@button__border-radius: {{numeric_value (mfthemefo/default_button/button_border_radius)}};
+
 // Primary buttons
 @button-primary__background: {{color (mfthemefo/primary_button/primary_button_bg_color)}};
 @button-primary__hover__background: {{color (mfthemefo/primary_button/primary_button_bg_color_hover)}};
@@ -22,14 +33,6 @@
 @button-primary__hover__color: {{color (mfthemefo/primary_button/primary_button_color_hover)}};
 @button-primary__border: 1px solid {{color (mfthemefo/primary_button/primary_button_border_color)}};
 @button-primary__hover__border: 1px solid {{color (mfthemefo/primary_button/primary_button_border_color_hover)}};
-
-// Buttons
-@button__background: {{color (mfthemefo/secondary_button/button_bg_color)}};
-@button__hover__background: {{color (mfthemefo/secondary_button/button_bg_color_hover)}};
-@button__color: {{color (mfthemefo/secondary_button/button_color)}};
-@button__hover__color: {{color (mfthemefo/secondary_button/button_color_hover)}};
-@button__border: 1px solid {{color (mfthemefo/secondary_button/button_border_color)}};
-@button__hover__border: 1px solid {{color (mfthemefo/secondary_button/button_border_color_hover)}};
 
 // Link
 @link__color: {{color (mfthemefo/link/link_color)}};
@@ -118,7 +121,6 @@
 @tab-control__color: @navigation-desktop-level0-item__color;
 @tab-control__hover__color: @navigation-desktop-level0-item__hover__color;
 @tab-control__active__color: @navigation-desktop-level0-item__hover__color;
-
 
 // Layered Navigation
 @filter-title-bg-color-active: {{color (mfthemefo/layered_navigation/filter_title_bg_color_active)}};
