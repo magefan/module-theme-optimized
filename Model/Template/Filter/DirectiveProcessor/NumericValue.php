@@ -34,7 +34,8 @@ class NumericValue implements DirectiveProcessorInterface
     public function process(array $construction, Template $filter, array $templateVariables): string
     {
         $value = $this->config->getConfig($construction[1]);
-        return ($value ?  $value : '1') . 'px';
+
+        return ($value ?  $value : '1') . $this->addPrefix($construction[1]);
     }
 
     /**
@@ -43,5 +44,16 @@ class NumericValue implements DirectiveProcessorInterface
     public function getRegularExpression(): string
     {
         return self::REGULAR_EXPRESSION_TO_GET_COLOR_VARIABLE_NAME;
+    }
+
+    /**
+     * @param $configPath
+     * @return string
+     */
+    protected function addPrefix($configPath): string
+    {
+        $withOutPixel = ['mfthemefo/default_button/button_font_weight'];
+
+        return in_array($configPath, $withOutPixel) ? '' : 'px';
     }
 }

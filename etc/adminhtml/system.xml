@@ -136,9 +136,10 @@
                     <validate>validate-digits</validate>
                     <comment>Set font size for default buttons.</comment>
                 </field>
-                <field id="button_font_weight" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="button_font_weight" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Button Font Weight</label>
                     <validate>validate-digits</validate>
+                    <source_model>Magefan\ThemeOptimized\Model\Config\Source\GoogleFontWeights</source_model>
                     <comment>Set font weight for default buttons.</comment>
                 </field>
                 <field id="button_border_radius" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
