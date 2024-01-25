@@ -9,14 +9,13 @@ namespace Magefan\ThemeOptimized\Setup\Patch\Data;
 
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-use Magento\Framework\Setup\Patch\PatchRevertableInterface;
 use Magento\Eav\Setup\EavSetupFactory;
 use Magefan\ThemeOptimized\Setup\Updater;
 use Magento\Framework\Setup\SampleData\Executor;
 use Magefan\ThemeOptimized\Model\Media;
 
 
-class Theme_v_2_0_2 implements DataPatchInterface, PatchRevertableInterface
+class PrepareSampleData implements DataPatchInterface
 {
 
     /**
@@ -66,7 +65,7 @@ class Theme_v_2_0_2 implements DataPatchInterface, PatchRevertableInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @return void
      */
     public function apply()
     {
@@ -86,13 +85,8 @@ class Theme_v_2_0_2 implements DataPatchInterface, PatchRevertableInterface
         $this->media->copyToPubMedia(__DIR__ . '/../../../pub');
     }
 
-    public function revert()
-    {
-
-    }
-
     /**
-     * {@inheritdoc}
+     * @return array|string[]
      */
     public function getAliases()
     {
@@ -100,12 +94,10 @@ class Theme_v_2_0_2 implements DataPatchInterface, PatchRevertableInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @return array|string[]
      */
     public static function getDependencies()
     {
-        return [
-
-        ];
+        return [];
     }
 }
