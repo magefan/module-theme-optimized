@@ -3,109 +3,109 @@
 //  ____________________________________________
 
 // Theme Colors
-@theme__color__primary: {{color (theme_color/primary)}};
-@theme__color__primary-alt: {{color (theme_color/primary_alt)}};
-@theme__color__secondary: {{color (theme_color/secondary)}};
+@theme__color__primary: MFScolor (theme_color/primary)MFE;
+@theme__color__primary-alt: MFScolor (theme_color/primary_alt)MFE;
+@theme__color__secondary: MFScolor (theme_color/secondary)MFE;
 
 // Color nesting
 // Basic colors
-@page__background-color: {{color (basic/page_background_color)}};
-@primary__color: {{color (basic/text_color)}};
-@text__color: {{color (basic/text_color)}};
-@border-color__base: {{color (basic/border_color_base)}};
-@sidebar__background-color: {{color (basic/sidebar_background_color)}};
+@page__background-color: MFScolor (basic/page_background_color)MFE;
+@primary__color: MFScolor (basic/text_color)MFE;
+@text__color: MFScolor (basic/text_color)MFE;
+@border-color__base: MFScolor (basic/border_color_base)MFE;
+@sidebar__background-color: MFScolor (basic/sidebar_background_color)MFE;
 
 // Primary buttons
-@button-primary__background: {{color (primary_button/primary_button_bg_color)}};
-@button-primary__hover__background: {{color (primary_button/primary_button_bg_color_hover)}};
-@button-primary__color: {{color (primary_button/primary_button_color)}};
-@button-primary__hover__color: {{color (primary_button/primary_button_color_hover)}};
-@button-primary__border: 1px solid {{color (primary_button/primary_button_border_color)}};
-@button-primary__hover__border: 1px solid {{color (primary_button/primary_button_border_color_hover)}};
+@button-primary__background: MFScolor (primary_button/primary_button_bg_color)MFE;
+@button-primary__hover__background: MFScolor (primary_button/primary_button_bg_color_hover)MFE;
+@button-primary__color: MFScolor (primary_button/primary_button_color)MFE;
+@button-primary__hover__color: MFScolor (primary_button/primary_button_color_hover)MFE;
+@button-primary__border: 1px solid MFScolor (primary_button/primary_button_border_color)MFE;
+@button-primary__hover__border: 1px solid MFScolor (primary_button/primary_button_border_color_hover)MFE;
 
 // Buttons
-@button__background: {{color (secondary_button/button_bg_color)}};
-@button__hover__background: {{color (secondary_button/button_bg_color_hover)}};
-@button__color: {{color (secondary_button/button_color)}};
-@button__hover__color: {{color (secondary_button/button_color_hover)}};
-@button__border: 1px solid {{color (secondary_button/button_border_color)}};
-@button__hover__border: 1px solid {{color (secondary_button/button_border_color_hover)}};
+@button__background: MFScolor (secondary_button/button_bg_color)MFE;
+@button__hover__background: MFScolor (secondary_button/button_bg_color_hover)MFE;
+@button__color: MFScolor (secondary_button/button_color)MFE;
+@button__hover__color: MFScolor (secondary_button/button_color_hover)MFE;
+@button__border: 1px solid MFScolor (secondary_button/button_border_color)MFE;
+@button__hover__border: 1px solid MFScolor (secondary_button/button_border_color_hover)MFE;
 
 // Link
-@link__color: {{color (link/link_color)}};
-@link__hover__color: {{color (link/link_color_hover)}};
+@link__color: MFScolor (link/link_color)MFE;
+@link__hover__color: MFScolor (link/link_color_hover)MFE;
 
 // Icons
-@icon_color: {{color (icon/icon_color)}};
-@icon_color_hover: {{color (icon/icon_color_hover)}};
+@icon_color: MFScolor (icon/icon_color)MFE;
+@icon_color_hover: MFScolor (icon/icon_color_hover)MFE;
 
 // All Icons
-@icon-font__color: {{color (icon/icon_color)}};
-@icon-font__color-hover: {{color (icon/icon_color_hover)}};
+@icon-font__color: MFScolor (icon/icon_color)MFE;
+@icon-font__color-hover: MFScolor (icon/icon_color_hover)MFE;
 @_icon-font-color-active: @icon-font__color-hover;
 
 // Form
 // @form-element-input__background: @color-gray89;
-@form-element-input__background: {{color (input/input_background_color)}};
+@form-element-input__background: MFScolor (input/input_background_color)MFE;
 @form-element-input__border-color: @border-color__base;
-@form-element-input__border-color: {{color (input/input_border_color)}};
+@form-element-input__border-color: MFScolor (input/input_border_color)MFE;
 // @form-element-input__border: 1px solid @form-element-input__border-color;
-@form-element-input__color: {{color (input/input_color)}};
+@form-element-input__color: MFScolor (input/input_color)MFE;
 // Placeholder
-@form-element-input-placeholder__color: {{color (input/input_placeholder_color)}};
+@form-element-input-placeholder__color: MFScolor (input/input_placeholder_color)MFE;
 // Autofill
-@form-element_autofill__background: {{color (input/input_background_color)}};
-@form-element_autofill__color: {{color (input/input_color)}};
+@form-element_autofill__background: MFScolor (input/input_background_color)MFE;
+@form-element_autofill__color: MFScolor (input/input_color)MFE;
 
 // Header
-@header__background-color: {{color (header/header_bg_color)}};
+@header__background-color: MFScolor (header/header_bg_color)MFE;
 
 // Header Top Panel
-@header_panel_wrapper: {{color (header/header_panel_wrapper_bg_color)}};
-@header_panel_wrapper_color: {{color (header/header_panel_wrapper_color)}};
+@header_panel_wrapper: MFScolor (header/header_panel_wrapper_bg_color)MFE;
+@header_panel_wrapper_color: MFScolor (header/header_panel_wrapper_color)MFE;
 
 // Header icons
-@header-icons-color: {{color (icon_header/icon_header_color)}};
-@header-icons-color-hover: {{color (icon_header/icon_header_color_hover)}};
+@header-icons-color: MFScolor (icon_header/icon_header_color)MFE;
+@header-icons-color-hover: MFScolor (icon_header/icon_header_color_hover)MFE;
 
 // Navigation Mobile
-@navigation-level0-item__color: {{color (navigation/nav_item_color)}};
-@navigation-level0-item__hover__color: {{color (navigation/nav_item_color_hover)}};
+@navigation-level0-item__color: MFScolor (navigation/nav_item_color)MFE;
+@navigation-level0-item__hover__color: MFScolor (navigation/nav_item_color_hover)MFE;
 // Submenu Mobile
-@submenu-item__color: {{color (navigation/nav_item_color)}};
+@submenu-item__color: MFScolor (navigation/nav_item_color)MFE;
 
 // Navigation Desktop
-@navigation__background: {{color (navigation/nav_bg_color)}};
-@navigation-desktop-level0-item__color: {{color (navigation/nav_item_color)}};
-@navigation-desktop-level0-item__hover__color: {{color (navigation/nav_item_color_hover)}};
-@navigation-desktop-level0-item__active__color: {{color (navigation/nav_item_color_hover)}};
+@navigation__background: MFScolor (navigation/nav_bg_color)MFE;
+@navigation-desktop-level0-item__color: MFScolor (navigation/nav_item_color)MFE;
+@navigation-desktop-level0-item__hover__color: MFScolor (navigation/nav_item_color_hover)MFE;
+@navigation-desktop-level0-item__active__color: MFScolor (navigation/nav_item_color_hover)MFE;
 
 // Submenu Desktop
-@submenu-desktop-item__color: {{color (navigation/sub_menu_item_color)}};
-@submenu-desktop-item__hover__color: {{color (navigation/sub_menu_item_color_hover)}};
-@submenu-desktop-item__background: {{color (navigation/sub_menu_item_bg_color)}};
-@submenu-desktop-item__hover__background: {{color (navigation/sub_menu_item_bg_color_hover)}};
+@submenu-desktop-item__color: MFScolor (navigation/sub_menu_item_color)MFE;
+@submenu-desktop-item__hover__color: MFScolor (navigation/sub_menu_item_color_hover)MFE;
+@submenu-desktop-item__background: MFScolor (navigation/sub_menu_item_bg_color)MFE;
+@submenu-desktop-item__hover__background: MFScolor (navigation/sub_menu_item_bg_color_hover)MFE;
 
 // Breadcrumbs
-@_breadcrumbs-link-color: {{color (basic/text_color)}};
-@_breadcrumbs-link-color-visited: {{color (basic/text_color)}};
-@_breadcrumbs-current-color: {{color (basic/text_color)}};
+@_breadcrumbs-link-color: MFScolor (basic/text_color)MFE;
+@_breadcrumbs-link-color-visited: MFScolor (basic/text_color)MFE;
+@_breadcrumbs-current-color: MFScolor (basic/text_color)MFE;
 
 // Product Items
-@product_items_bg_color: {{color (product_items/product_items_bg_color)}};
-@product_items_color: {{color (product_items/product_items_color)}};
-@product_items_border_color: {{color (product_items/product_items_border_color)}};
-@product_items_border_color_hover: {{color (product_items/product_items_border_color_hover)}};
-@product_items_border_radius: {{color (product_items/product_items_border_radius)}};
+@product_items_bg_color: MFScolor (product_items/product_items_bg_color)MFE;
+@product_items_color: MFScolor (product_items/product_items_color)MFE;
+@product_items_border_color: MFScolor (product_items/product_items_border_color)MFE;
+@product_items_border_color_hover: MFScolor (product_items/product_items_border_color_hover)MFE;
+@product_items_border_radius: MFScolor (product_items/product_items_border_radius)MFE;
 
 // Swatch
-@attr-swatch-option__color: {{color (swatch/attr_swatch_option_color)}};
-@swatch-option-text__color: {{color (swatch/swatch_option_text_color)}};
-@swatch-option__hover__color: {{color (swatch/swatch_option_hover_color)}};
+@attr-swatch-option__color: MFScolor (swatch/attr_swatch_option_color)MFE;
+@swatch-option-text__color: MFScolor (swatch/swatch_option_text_color)MFE;
+@swatch-option__hover__color: MFScolor (swatch/swatch_option_hover_color)MFE;
 
 // Price
-@price_color: {{color (price/price_color)}};
-@old_price_color: {{color (price/old_price_color)}};
+@price_color: MFScolor (price/price_color)MFE;
+@old_price_color: MFScolor (price/old_price_color)MFE;
 
 // Tabs
 @tab-control__background-color: @page__background-color;
@@ -115,22 +115,22 @@
 
 
 // Layered Navigation
-@filter-title-bg-color-active: {{color (layered_navigation/filter_title_bg_color_active)}};
-@filter-title-color: {{color (layered_navigation/filter_title_color)}};
-@filter-title-color-active: {{color (layered_navigation/filter_title_color_active)}};
-@filter-content-bg-color: {{color (layered_navigation/filter_content_bg_color)}};
-@filter-content-item-color: {{color (layered_navigation/filter_content_item_color)}};
-@filter-content-item-color-hover: {{color (layered_navigation/filter_content_item_color_hover)}};
-@filter-content-item-bg-color: {{color (layered_navigation/filter_content_item_bg_color)}};
-@filter-content-item-bg-hover: {{color (layered_navigation/filter_content_item_bg_hover)}};
+@filter-title-bg-color-active: MFScolor (layered_navigation/filter_title_bg_color_active)MFE;
+@filter-title-color: MFScolor (layered_navigation/filter_title_color)MFE;
+@filter-title-color-active: MFScolor (layered_navigation/filter_title_color_active)MFE;
+@filter-content-bg-color: MFScolor (layered_navigation/filter_content_bg_color)MFE;
+@filter-content-item-color: MFScolor (layered_navigation/filter_content_item_color)MFE;
+@filter-content-item-color-hover: MFScolor (layered_navigation/filter_content_item_color_hover)MFE;
+@filter-content-item-bg-color: MFScolor (layered_navigation/filter_content_item_bg_color)MFE;
+@filter-content-item-bg-hover: MFScolor (layered_navigation/filter_content_item_bg_hover)MFE;
 
 // Subscribe
-@subscribe-bg-color: {{color (subscribe/subscribe_bg_color)}};
-@subscribe-color: {{color (subscribe/subscribe_color)}};
+@subscribe-bg-color: MFScolor (subscribe/subscribe_bg_color)MFE;
+@subscribe-color: MFScolor (subscribe/subscribe_color)MFE;
 
 // Footer
-@footer__background-color: {{color (footer/footer_bg_color)}};
+@footer__background-color: MFScolor (footer/footer_bg_color)MFE;
 
 // Copyright
-@copyright_bg_color: {{color (copyright/copyright_bg_color)}};
-@copyright_color: {{color (copyright/copyright_color)}};
+@copyright_bg_color: MFScolor (copyright/copyright_bg_color)MFE;
+@copyright_color: MFScolor (copyright/copyright_color)MFE;
