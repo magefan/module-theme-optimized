@@ -13,7 +13,7 @@ use Magento\Framework\Filter\Template;
 
 class Color implements DirectiveProcessorInterface
 {
-    const REGULAR_EXPRESSION_TO_GET_COLOR_VARIABLE_NAME  = '/{{color\s\(([a-z\_\/]{0,50})\)}}/si';
+    const REGULAR_EXPRESSION_TO_GET_COLOR_VARIABLE_NAME  = '/MFScolor\s\(([a-z\_\/]{0,50})\)MFE/si';
 
     /**
      * @var Config
